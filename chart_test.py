@@ -8,6 +8,5 @@ pop_2020 = df['Population 2020'].to_list()
 psp.init(filename='chart_test', title='Bar Chart Test')
 
 psp.row(
-    col1 = '',
-    col2 = psp.bar(title='Population of Pakistan Cities', labels=city, dtLabel='2020 Pop', dt=pop_2020)
+    col1 = psp.bar(title='Population of Pakistan Cities', labels=city, dtLabel='', dt=pop_2020)
 )

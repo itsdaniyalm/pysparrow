@@ -2,15 +2,15 @@ logo = True
 
 def init(filename, title):
     head = f'''
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>{title}</title>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
-            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{title}</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         </head>
         <body>
     '''
@@ -23,7 +23,7 @@ def init(filename, title):
     if logo==True:
         logoHtml='''
         <div class="row">
-        <div class="column column-10 column-offset-90"><a herf="https://github.com/itsdaniyalm/pysparrow"><img src="https://raw.githubusercontent.com/itsdaniyalm/pysparrow/master/images/icon.png" width ="25" height ="25"></a></div>
+        <div class="column column-10 column-offset-90"><a herf="https://github.com/itsdaniyalm/pysparrow" title="pySparrow" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/itsdaniyalm/pysparrow/master/images/icon.png" width ="25" height ="25"></a></div>
         </div>
         '''
         file = open(filen,'a')
