@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pakistan Population</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div>
+        <canvas id="myChart"></canvas>
+      </div>
+      <script>
+        const ctx = document.getElementById('myChart');
+      
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['Karachi', 'Lahore', 'Faisalabad', 'Gujranwala', 'Rawalpindi'],
+            datasets: [{
+              label: '2020 Population in Millions',
+              data: [16.09,12.64,3.46,2.23,2.24],
+              borderWidth: 1,
+              backgroundColor: [
+          "#F72585",
+          "#720987",
+          "#3A0CA3",
+          "#4361EE",
+          "#4CC9F0"
+          ]
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+      </script>
+      
+</body>
+</html>
