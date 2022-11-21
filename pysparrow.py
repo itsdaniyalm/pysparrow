@@ -61,16 +61,16 @@ def p(txt):
 
 def bar(title, labels, dtLabel, dt):
     chart = f'''
-    <div><canvas id={title}></canvas></div>
+    <div><canvas id='{title}'></canvas></div>
     <script>
-        const ctx = document.getElementById({title});
+        const ctx = document.getElementById('{title}');
       
         new Chart(ctx, {{
           type: 'bar',
           data: {{
             labels: {labels},
             datasets: [{{
-              label: {dtLabel},
+              label: '{dtLabel}',
               data: {dt},
               borderWidth: 1,
               backgroundColor: [
