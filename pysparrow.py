@@ -1,4 +1,3 @@
-
 logo = True
 
 def init(filename, title):
@@ -60,8 +59,40 @@ def p(txt):
     '''
     return p
 
-
-
+def bar(title, labels, dtLabel, dt):
+    chart = f'''
+    <div><canvas id={title}></canvas></div>
+    <script>
+        const ctx = document.getElementById({title});
+      
+        new Chart(ctx, {{
+          type: 'bar',
+          data: {{
+            labels: {labels},
+            datasets: [{{
+              label: {dtLabel},
+              data: {dt},
+              borderWidth: 1,
+              backgroundColor: [
+          "#F72585",
+          "#720987",
+          "#3A0CA3",
+          "#4361EE",
+          "#4CC9F0"
+          ]
+            }}]
+          }},
+          options: {{
+            scales: {{
+              y: {{
+                beginAtZero: true
+              }}
+            }}
+          }}
+        }});
+      </script>
+    '''
+    return chart
 
 def row(col1='False',col2='False',col3='False',col4='False',col5='False'):
     start = '''
