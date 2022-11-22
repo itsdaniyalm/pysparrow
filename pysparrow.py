@@ -24,7 +24,7 @@ def init(filename, title):
 
     if icon==True:
         logoHtml='''
-        <a herf="https://github.com/itsdaniyalm/pysparrow" title="pySparrow" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/itsdaniyalm/pysparrow/master/images/made_with.png"></a>
+        <a herf="https://itsdaniyalm.com" title="Made with pySparrow" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/itsdaniyalm/pysparrow/master/images/made_with_white.png" height="30"></a>
         </head>
         <body>
         '''
