@@ -75,23 +75,22 @@ def p(txt):
     '''
     return p
 
-def bar(title, dataframe, xlabel, xdata, ylabel, color=default):
+def bar(title, dataframe, xlabel, ydata, ylabel, titledisplay = 'true', legenddisplay = 'true', color=default, height = '100', width = '100'):
     df = f'pd.{dataframe}'
     x_label = dataframe[xlabel].tolist()
-    x_data = dataframe[xdata].tolist()
+    y_data = dataframe[ydata].tolist()
     chart = f'''
-    <div><canvas id='{title}'></canvas></div>
+    <div><canvas id='{title}' width='{width}' height='{height}'></canvas></div>
     <script>
         const ctx = document.getElementById('{title}');
-      
         new Chart(ctx, {{
           type: 'bar',
           data: {{
             labels: {x_label},
             datasets: [{{
               label: '{ylabel}',
-              data: {x_data},
-              borderWidth: 1,
+              data: {y_data},
+              borderWidth: 0,
               backgroundColor: {color} 
             }}]
           }},
@@ -100,6 +99,16 @@ def bar(title, dataframe, xlabel, xdata, ylabel, color=default):
               y: {{
                 beginAtZero: true
               }}
+            }},
+            plugins: {{
+                title: {{
+                    align: 'start',
+                    display: {titledisplay},
+                    text: '{title}'
+                }},
+                legend: {{
+                    display: {legenddisplay}
+                }}
             }}
           }}
         }});
@@ -107,29 +116,109 @@ def bar(title, dataframe, xlabel, xdata, ylabel, color=default):
     '''
     return chart
 
-def row(col1='False',col2='False',col3='False',col4='False',col5='False'):
-    start = '''
+def line(title, dataframe, xlabel, ylabel1, ydata1, ylabel2='null', ydata2='null', ylabel3='null', ydata3='null', ylabel4='null', ydata4='null', ylabel5='null', ydata5='null', titledisplay = 'true', legenddisplay = 'true', color=default, height = '100', width = '100'):
+    df = f'pd.{dataframe}'
+    x_label = dataframe[xlabel].tolist()
+    y_data1 = dataframe[ydata1].tolist()
+    try:
+        y_data2 = dataframe[ydata2].tolist()
+    except:
+        y_data2 = 'null'
+    try:
+        y_data3 = dataframe[ydata3].tolist()
+    except:
+        y_data3 = 'null'
+    try:
+        y_data4 = dataframe[ydata4].tolist()
+    except:
+        y_data4 = 'null'
+    try:
+        y_data5 = dataframe[ydata5].tolist()
+    except:
+        y_data5 = 'null'
+    chart = f'''
+    <div><canvas id='{title}' width='{width}' height='{height}'></canvas></div>
+    <script>
+        const ctxLine = document.getElementById('{title}');
+        new Chart(ctxLine, {{
+            type: 'line',
+            data: {{
+                labels: {x_label},
+                datasets: [
+                {{
+                label: ['{ylabel1}'],
+                data: {y_data1},
+                borderColor: '{color[0]}' 
+                }},
+                {{
+                label: ['{ylabel2}'],
+                data: {y_data2},
+                borderColor: '{color[1]}'
+                }},
+                {{
+                label: ['{ylabel3}'],
+                data: {y_data3},
+                borderColor: '{color[2]}'
+                }},
+                {{
+                label: ['{ylabel4}'],
+                data: {y_data4},
+                borderColor: '{color[3]}'
+                }},
+                {{
+                label: ['{ylabel5}'],
+                data: {y_data5},
+                borderColor: '{color[4]}'
+                }}
+                ]
+            }},
+            options: {{
+                scales: {{
+                y: {{
+                    beginAtZero: true
+                }}
+                }},
+                plugins: {{
+                    title: {{
+                        align: 'start',
+                        display: {titledisplay},
+                        text: '{title}'
+                    }},
+                    legend: {{
+                        display: {legenddisplay}
+                    }}
+                }}
+            }}
+            }});
+    </script>
+    '''
+    return chart
+
+
+
+def row(col1='False',col2='False',col3='False',col4='False',col5='False', col1w = 100, col2w = 100, col3w = 100, col4w = 100, col5w = 100):
+    start = f'''
     <div class = "container">
     <div class = "row">
     '''
     if col1!='False':
-        cc1 = f'''<div class="column">{col1}</div>'''
+        cc1 = f'''<div class="column column-{col1w}">{col1}</div>'''
     else:
         cc1 = ''
     if col2!='False':
-        cc2 = f'''<div class="column">{col2}</div>'''
+        cc2 = f'''<div class="column column-{col2w}">{col2}</div>'''
     else:
         cc2 = ''
     if col3!='False':
-        cc3 = f'''<div class="column">{col3}</div>'''
+        cc3 = f'''<div class="column column-{col3w}">{col3}</div>'''
     else:
         cc3 = ''
     if col4!='False':
-        cc4 = f'''<div class="column">{col4}</div>'''
+        cc4 = f'''<div class="column column-{col4w}">{col4}</div>'''
     else:
         cc4 = ''
     if col5!='False':
-        cc5 = f'''<div class="column">{col5}</div>'''
+        cc5 = f'''<div class="column column-{col5w}">{col5}</div>'''
     else:
         cc5 = ''
     end = '''

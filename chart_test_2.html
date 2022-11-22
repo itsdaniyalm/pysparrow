@@ -16,11 +16,10 @@
         
     <div class = "container">
     <div class = "row">
-    <div class="column">
-    <div><canvas id='Population of Pakistan Cities'></canvas></div>
+    <div class="column"></div><div class="column">
+    <div><canvas id='Population of Pakistan Cities' height='200'></canvas></div>
     <script>
         const ctx = document.getElementById('Population of Pakistan Cities');
-      
         new Chart(ctx, {
           type: 'bar',
           data: {
@@ -28,7 +27,7 @@
             datasets: [{
               label: 'Population 2020',
               data: [16.09, 12.64, 3.46, 2.23, 2.24],
-              borderWidth: 1,
+              borderWidth: 0,
               backgroundColor: ['#ff3399', '#cc33ff', '#6600cc', '#3333cc', '#330099', '#003399', '#3366ff', '3399ff', '33ccff'] 
             }]
           },
@@ -37,6 +36,16 @@
               y: {
                 beginAtZero: true
               }
+            },
+            plugins: {
+                title: {
+                    align: 'start',
+                    display: true,
+                    text: 'Population of Pakistan Cities'
+                },
+                legend: {
+                    display: false
+                }
             }
           }
         });
