@@ -1,0 +1,47 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bar Chart Test</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        </head>
+    
+        <a herf="https://itsdaniyalm.com" title="Made with pySparrow" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/itsdaniyalm/pysparrow/master/images/pysparrow_icon.png" height="30" align="right"></a>
+        </head>
+        <body>
+        
+    <div class = "container">
+    <div class = "row">
+    <div class="column">
+    <div><canvas id='Population of Pakistan Cities'></canvas></div>
+    <script>
+        const ctx = document.getElementById('Population of Pakistan Cities');
+      
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['Karachi', 'Lahore', 'Faisalabad', 'Gujranwala', 'Rawalpindi'],
+            datasets: [{
+              label: 'Population 2020',
+              data: [16.09, 12.64, 3.46, 2.23, 2.24],
+              borderWidth: 1,
+              backgroundColor: ['#ff3399', '#cc33ff', '#6600cc', '#3333cc', '#330099', '#003399', '#3366ff', '3399ff', '33ccff'] 
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+      </script>
+    </div>
+    </div>
+    </div>
+    

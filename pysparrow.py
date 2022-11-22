@@ -1,6 +1,14 @@
 import pandas as pd
 
+#pySparrow Icon
 icon = True
+
+# color pallets
+default = ["#ff3399","#cc33ff","#6600cc","#3333cc","#330099","#003399","#3366ff","3399ff","33ccff"]
+beach = ["#99ccff","#99ffff","#009999","#66cccc","#99cccc","#cc9966","#ffcc99","#ffcccc","#ffffcc"]
+forest = ["#333366","#336666","#cc6633","#993300","#99cc66","#999966","#ff6633","#ff9966","#ffcc66"]
+dusktilldawn = ["#9999ff","#6666cc","#666699","#333366","#333333","#663300","#996633","#cc9900","#ffcc00"]
+rainbow = ["#666699","#3399cc","#66cc99","#99cc99","#ffff99","#ffcc99","#ff9966","#ff6633","#cc3366"]
 
 def init(filename, title):
     head = f'''
@@ -14,17 +22,15 @@ def init(filename, title):
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         </head>
-        <body>
     '''
     global filen
     filen = filename + '.html'
     global file
     file = open(filen,'w')
     file.write(head)
-
     if icon==True:
         logoHtml='''
-        <a herf="https://itsdaniyalm.com" title="Made with pySparrow" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/itsdaniyalm/pysparrow/master/images/made_with_white.png" height="30"></a>
+        <a herf="https://itsdaniyalm.com" title="Made with pySparrow" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/itsdaniyalm/pysparrow/master/images/pysparrow_icon.png" height="30" align="right"></a>
         </head>
         <body>
         '''
@@ -34,6 +40,7 @@ def init(filename, title):
         logoHtml='''
         </head>
         <body>
+        <style>
         '''
         file = open(filen,'a')
         file.write(logoHtml)
@@ -68,7 +75,10 @@ def p(txt):
     '''
     return p
 
-def bar(title, labels, dtLabel, dt):
+def bar(title, dataframe, xlabel, xdata, ylabel, color=default):
+    df = f'pd.{dataframe}'
+    x_label = dataframe[xlabel].tolist()
+    x_data = dataframe[xdata].tolist()
     chart = f'''
     <div><canvas id='{title}'></canvas></div>
     <script>
@@ -77,18 +87,12 @@ def bar(title, labels, dtLabel, dt):
         new Chart(ctx, {{
           type: 'bar',
           data: {{
-            labels: {labels},
+            labels: {x_label},
             datasets: [{{
-              label: '{dtLabel}',
-              data: {dt},
+              label: '{ylabel}',
+              data: {x_data},
               borderWidth: 1,
-              backgroundColor: [
-          "#F72585",
-          "#720987",
-          "#3A0CA3",
-          "#4361EE",
-          "#4CC9F0"
-          ]
+              backgroundColor: {color} 
             }}]
           }},
           options: {{
