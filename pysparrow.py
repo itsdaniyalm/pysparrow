@@ -1,4 +1,4 @@
-logo = True
+icon = True
 
 def init(filename, title):
     head = f'''
@@ -20,11 +20,18 @@ def init(filename, title):
     file = open(filen,'w')
     file.write(head)
 
-    if logo==True:
+    if icon==True:
         logoHtml='''
-        <div class="row">
-        <div class="column column-10 column-offset-90"><a herf="https://github.com/itsdaniyalm/pysparrow" title="pySparrow" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/itsdaniyalm/pysparrow/master/images/icon.png" width ="25" height ="25"></a></div>
-        </div>
+        <a herf="https://github.com/itsdaniyalm/pysparrow" title="pySparrow" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/itsdaniyalm/pysparrow/master/images/icon.png" width="25" height="25"></a>
+        </head>
+        <body>
+        '''
+        file = open(filen,'a')
+        file.write(logoHtml)
+    else:
+        logoHtml='''
+        </head>
+        <body>
         '''
         file = open(filen,'a')
         file.write(logoHtml)
