@@ -1,3 +1,5 @@
+import pandas as pd
+
 icon = True
 
 def init(filename, title):
@@ -22,7 +24,7 @@ def init(filename, title):
 
     if icon==True:
         logoHtml='''
-        <a herf="https://github.com/itsdaniyalm/pysparrow" title="pySparrow" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/itsdaniyalm/pysparrow/master/images/icon.png" width="25" height="25"></a>
+        <a herf="https://github.com/itsdaniyalm/pysparrow" title="pySparrow" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/itsdaniyalm/pysparrow/master/images/made_with.png"></a>
         </head>
         <body>
         '''
