@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <title>pieSparrow - Create frontend pages from within Python</title>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <!-- Milligram CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+</head>
+<body>
+    <!--Navbar-->
+    <div id="navbar" class="container">
+        <div class="row">
+            <div class="column"></div>
+            <div class="column column-40"><a href="#">Docs</a> • <a href="#">Examples</a> • <a href="#">Tutorial</a> • <a href="https://github.com/itsdaniyalm/piesparrow"target="_blank" rel="noopener">Github</a></div>
+            <div class="column"></div>
+        </div>
+    </div>
+    <style>
+        #navbar {
+            overflow: hidden;
+            background-color: rgb(255, 255, 255);
+            margin: auto;
+            width: 50%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        </style>
+        <script>
+            window.onscroll = function() {myFunction()};
+            var navbar = document.getElementById("navbar");
+            var sticky = navbar.offsetTop;
+            function myFunction() {
+                if (window.pageYOffset >= sticky) {
+                    navbar.classList.add("sticky")
+                } else {
+                    navbar.classList.remove("sticky");
+                }
+            } 
+        </script>
+        </div>
+</body>
+</html>

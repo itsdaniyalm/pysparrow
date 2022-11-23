@@ -1,4 +1,4 @@
-import pysparrow as psp
+import piesparrow as psp
 
 
 
