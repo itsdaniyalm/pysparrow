@@ -1,5 +1,7 @@
 import pandas as pd
 
+#pySparrow Icon
+icon = True
 
 # color pallets
 default = ["#ff3399","#cc33ff","#6600cc","#3333cc","#330099","#003399","#3366ff","3399ff","33ccff"]
@@ -8,7 +10,7 @@ forest = ["#333366","#336666","#cc6633","#993300","#99cc66","#999966","#ff6633",
 dusktilldawn = ["#9999ff","#6666cc","#666699","#333366","#333333","#663300","#996633","#cc9900","#ffcc00"]
 rainbow = ["#666699","#3399cc","#66cc99","#99cc99","#ffff99","#ffcc99","#ff9966","#ff6633","#cc3366"]
 
-def init(filename, title, icon=True):
+def init(filename, title):
     head = f'''
     <!DOCTYPE html>
     <html lang="en">
@@ -28,7 +30,7 @@ def init(filename, title, icon=True):
     file.write(head)
     if icon==True:
         logoHtml='''
-        <div><a herf='http://pysparrow.com' title="Made with pySparrow" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/itsdaniyalm/pysparrow/master/images/pysparrow_icon.png" height="30" align="right"></a></div>
+        <a herf="https://itsdaniyalm.com" title="Made with pySparrow" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/itsdaniyalm/pysparrow/master/images/pysparrow_icon.png" height="30" align="right"></a>
         </head>
         <body>
         '''
@@ -38,6 +40,7 @@ def init(filename, title, icon=True):
         logoHtml='''
         </head>
         <body>
+        <style>
         '''
         file = open(filen,'a')
         file.write(logoHtml)
@@ -72,13 +75,7 @@ def p(txt):
     '''
     return p
 
-def bold(txt):
-    bold = f'''
-    <strong>{txt}</strong>
-    '''
-    return bold
-
-def bar(title, dataframe, xlabel, ydata, ylabel, titledisplay = 'true', legenddisplay = 'true', color=default, height = '100', width = '100', grid='false', axis='true'):
+def bar(title, dataframe, xlabel, ydata, ylabel, titledisplay = 'true', legenddisplay = 'true', color=default, height = '100', width = '100'):
     df = f'pd.{dataframe}'
     x_label = dataframe[xlabel].tolist()
     y_data = dataframe[ydata].tolist()
@@ -100,18 +97,8 @@ def bar(title, dataframe, xlabel, ydata, ylabel, titledisplay = 'true', legenddi
           options: {{
             scales: {{
               y: {{
-                beingAtZerop: true,
-                display: {axis},
-                grid: {{
-                  display: {grid}
-                }}
-            }},
-              x: {{
-                display: {axis},
-                grid: {{
-                  display: {grid}
-                }}
-              }}              
+                beginAtZero: true
+              }}
             }},
             plugins: {{
                 title: {{
@@ -129,7 +116,7 @@ def bar(title, dataframe, xlabel, ydata, ylabel, titledisplay = 'true', legenddi
     '''
     return chart
 
-def line(title, dataframe, xlabel, ylabel1, ydata1, ylabel2='null', ydata2='null', ylabel3='null', ydata3='null', ylabel4='null', ydata4='null', ylabel5='null', ydata5='null', titledisplay = 'true', legenddisplay = 'true', color=default, height = '100', width = '100', grid='false', axis='true'):
+def line(title, dataframe, xlabel, ylabel1, ydata1, ylabel2='null', ydata2='null', ylabel3='null', ydata3='null', ylabel4='null', ydata4='null', ylabel5='null', ydata5='null', titledisplay = 'true', legenddisplay = 'true', color=default, height = '100', width = '100'):
     df = f'pd.{dataframe}'
     x_label = dataframe[xlabel].tolist()
     y_data1 = dataframe[ydata1].tolist()
@@ -206,21 +193,11 @@ def line(title, dataframe, xlabel, ylabel1, ydata1, ylabel2='null', ydata2='null
         chart5 = "]},"
     chart6 = f'''
             options: {{
-                sscales: {{
-              y: {{
-                beingAtZerop: true,
-                display: {axis},
-                grid: {{
-                  display: {grid}
+                scales: {{
+                y: {{
+                    beginAtZero: true
                 }}
-            }},
-              x: {{
-                display: {axis},
-                grid: {{
-                  display: {grid}
-                }}
-              }}              
-            }},
+                }},
                 plugins: {{
                     title: {{
                         align: 'start',
@@ -238,55 +215,7 @@ def line(title, dataframe, xlabel, ylabel1, ydata1, ylabel2='null', ydata2='null
     chart = chart1 + chart2 + chart3 + chart4 + chart5 + chart6
     return chart
 
-def pie(title, dataframe, labels, data, titledisplay = 'true', legenddisplay = 'true', color=default, height = '400', width = '100', grid='false', axis='false'):
-    df = f'pd.{dataframe}'
-    c_label = dataframe[labels].tolist()
-    c_data = dataframe[data].tolist()
-    chart = f'''
-    <div><canvas id='{title}' width='{width}' height='{height}'></canvas></div>
-    <script>
-        const ctxpie = document.getElementById('{title}');
-        new Chart(ctxpie, {{
-          type: 'pie',
-          data: {{
-            labels: {c_label},
-            datasets: [{{
-              data: {c_data},
-              backgroundColor: {color} 
-            }}]
-          }},
-          options: {{
-            maintainAspectRatio: false,
-            scales: {{
-              y: {{
-                beingAtZerop: true,
-                display: {axis},
-                grid: {{
-                  display: {grid}
-                }}
-            }},
-              x: {{
-                display: {axis},
-                grid: {{
-                  display: {grid}
-                }}
-              }}              
-            }},
-            plugins: {{
-                title: {{
-                    align: 'start',
-                    display: {titledisplay},
-                    text: '{title}'
-                }},
-                legend: {{
-                    display: {legenddisplay}
-                }}
-            }}
-          }}
-        }});
-      </script>
-    '''
-    return chart
+
 
 def row(col1='False',col2='False',col3='False',col4='False',col5='False', col1w = 100, col2w = 100, col3w = 100, col4w = 100, col5w = 100):
     start = f'''

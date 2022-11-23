@@ -3,11 +3,15 @@ import pandas as pd
 
 df = pd.read_csv('population.csv')
 df2 = pd.read_csv('pop_province.csv')
+df3 = pd.read_csv('population.csv')
 
-psp.init(filename='combined_chart', title='Chart Test')
-psp.icon = False
+psp.init(filename='chart_test_pie', title='Chart Test', icon=True)
 psp.row(
-    col1w = 40  ,
+    col1w = 100,
+    col1 = psp.p('Heading'+ psp.bold('This is bold text')) 
+)
+psp.row(
+    col1w = 50  ,
     col1 = psp.line(
         title='Population trend of Provinces',
         dataframe= df2,
@@ -21,15 +25,27 @@ psp.row(
         ylabel4 = 'Sindh',
         ydata4 = 'Sindh',
         height = 70,
+        legenddisplay = 'true'
     ),
-    col2w = 40,
+    col2w = 50,
     col2 = psp.bar(
         title='Population of Pakistan Cities',
         dataframe = df,
         xlabel = 'City',
         ydata = 'Population 2020',
         ylabel = 'Population 2020',
-        height = 50,
-        legenddisplay = 'false'
+        height = 70,
+        legenddisplay = 'false',
+        color = psp.rainbow
         )
+)
+psp.row(
+    col1w = 50,
+    col1 = psp.pie(
+        title = 'Population of Cities',
+        dataframe = df3,
+        labels = 'City',
+        data = 'Population 2020',
+        height = 400
+    )
 )
