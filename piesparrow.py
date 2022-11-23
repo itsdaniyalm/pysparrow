@@ -78,6 +78,12 @@ def bold(txt):
     '''
     return bold
 
+def img(path, height=250, width=250):
+    image = f'''
+    <img src='{path}' width='{width}' height='{height}'>
+    '''
+    return image
+
 def bar(title, dataframe, xlabel, ydata, ylabel, titledisplay = 'true', legenddisplay = 'true', color=default, height = '100', width = '100', grid='false', axis='true'):
     df = f'pd.{dataframe}'
     x_label = dataframe[xlabel].tolist()

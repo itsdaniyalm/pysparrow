@@ -1,4 +1,4 @@
-import pysparrow as psp
+import piesparrow as psp
 import pandas as pd
 
 df = pd.read_csv('population.csv')
@@ -48,4 +48,8 @@ psp.row(
         data = 'Population 2020',
         height = 400
     )
+)
+psp.row(
+    col1w = 50,
+    col1 = psp.img('https://raw.githubusercontent.com/itsdaniyalm/pysparrow-dev/master/images/logo.png', width='25', height='25')
 )
