@@ -1,0 +1,35 @@
+ /* Style the navbar */
+ #navbar {
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    width: 99%;
+    position: fixed;
+    top: 0px;
+    padding-right: 5px;
+    z-index: 50;
+  }
+  
+  /* Navbar links */
+  #navbar a {
+    float: right;
+    display: block;
+    color: #7720b9;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+  }
+  #navbar a:hover {
+    float: right;
+    display: block;
+    color: #353535;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+  }
+
+  .vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);

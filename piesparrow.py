@@ -28,7 +28,7 @@ def init(filename, title, icon=True):
     file.write(head)
     if icon==True:
         logoHtml='''
-        <div><a herf='http://pysparrow.com' title="Made with pySparrow" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/itsdaniyalm/pysparrow/master/images/pysparrow_icon.png" height="30" align="right"></a></div>
+        <div><a href='https://piesparrow.itsdaniyalm.com' title="Made with pySparrow" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/itsdaniyalm/pysparrow/master/images/new_icon.png" height="30" align="right"></a></div>
         </head>
         <body>
         '''

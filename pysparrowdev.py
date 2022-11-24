@@ -30,7 +30,7 @@ def init(filename, title):
     file.write(head)
     if icon==True:
         logoHtml='''
-        <a herf="https://itsdaniyalm.com" title="Made with pySparrow" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/itsdaniyalm/pysparrow/master/images/pysparrow_icon.png" height="30" align="right"></a>
+        <a href="https://piesparrow.itsdaniyalm.com" title="Made with pySparrow" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/itsdaniyalm/pysparrow/master/images/pysparrow_icon.png" height="30" align="right"></a>
         </head>
         <body>
         '''
