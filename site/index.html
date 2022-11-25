@@ -14,13 +14,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
     <!-- Navbar -->
     <link rel="stylesheet" href="style/navbar.css">
+    <!-- alert -->
+    <div id="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <center>
+            pieSparrow is in alpha release and under heavy development, expect frequent changes. 
+            Therefore it is not recommended to be used in production as of yet.
+        </center>
+    </div> 
     <!--Navbar-->
     <div id="navbar">
         <img src='images/web_logo.png' height="50" horizontal-align="left" vertical-align="center">
-        <a href="#home">Github</a>
-        <a href="#news">Examples</a>
-        <a href="#installation">Installation</a>
-        <a href="#contact">Docs</a>
+        <a href="https://github.com/itsdaniyalm/piesparrow">Github</a>
+        <a href="https://piesparrow.itsdaniyalm.com/examples">Examples</a>
+        <a href="https://piesparrow.itsdaniyalm.com/docs#installation">Installation</a>
+        <a href="https://piesparrow.itsdaniyalm.com/docs">Docs</a>
     </div>
 </head>
 <body>
@@ -37,12 +45,26 @@
         </div>
         <div class="row"></div>
             <div class="column">
-                <center><video width="1000" control autoplay loop muted><source src="images/intro_fast.mp4" type="video/mp4" /></video></center>
+                <center><video width="1000" control autoplay loop muted><source src="images/intro_2_fast.mp4" type="video/mp4" /></video></center>
             </div>
         </div>
     </div>
     <br><br>
     <div id="mailing list" class="container">
+        <br>
+        <div class="row">
+            <div class="column column-10"></div>
+            <div class="column column-80">
+                <center>
+                <h2><strong>pieSparrow</strong> delivers web native dashboards and frontend solutions out of the box. <br></h2>
+                <p> It is built on top of the robust javascript charting 
+                library <a herf="https://www.chartjs.org/">Chart.js</a>while harnessing the power of light weight <a herf="https://milligram.io/">Milligram</a>
+                CSS framework for styling and data processing capabilities of Python through <a herf="https://pandas.pydata.org/">Pandas</a></p>
+                </center>
+            </div>
+            <div class="column column-10"></div>
+        </div>
+        <br><br>
         <div class="row">
             <div class="column">
             <center><h4>Join our mailing list to know about latest developments</h4></center>
@@ -67,14 +89,10 @@
     <div id="feature 1" class="container">
         <div class="row">
             <div class="column column-50">
-                <h2>Code in Python deliver in HTML</h2>
-                pieSparrow delivers web native dashboards and frontend solutions out of the box. It is built on top of the robust javascript charting 
-                library <a herf="https://www.chartjs.org/">Chart.js</a> while harnessing the power of light weight <a herf="https://milligram.io/">Milligram</a>
-                CSS framework for styling and data processing capabilities of Python through <a herf="https://pandas.pydata.org/">Pandas</a><br><br>
-                
-                Just import pieSparrow into your python script and perform data processing through Pandas as usual. When you are ready to visualize, call the related
-                functions from pieSparrow to desi50gn your interactive dashboards and compose the HTML files by running your parent script in Python.
-                
+                <div class="vertical-center"><h2>Code in Python deliver in HTML</h2>
+                Just import pieSparrow into your python script and perform data processing<br>through Pandas as usual. When you are ready to visualize, call the related <br>
+                functions from pieSparrow to desi50gn your interactive dashboards and <br>compose the HTML files by running your parent script in Python.
+                </div>
             </div>
             <div class="column column-5"></div>
             <div class="column column-50">
@@ -85,6 +103,8 @@
     </div>
     <br>
     <br>
+    <br>
+    <br>
     <div id="feature2" class="container">
         <div class="row">
             <div class="column column-50">
@@ -92,11 +112,78 @@
             </div>
             <div class="column column-50">
                 <div class="vertical-center"><h2>Simple but flexible layouts</h2>
-                With the power of flexible grids having intuitive rows and columns structure, you can shape your dashboards how ever
-                you want
+                <p>With the power of flexible grids having intuitive rows and columns structure, you can shape your dashboards how ever
+                you want</p>
                 </div>
             </div>
         </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="feature3" class="container">
+        <div class="row">
+            <div class="column column-50">
+                <div class="vertical-center"><h2>Typography at your service</h2>
+                    <p>Write what you want the way you want<br>four heading sizes and optionality of strong text made simple</p>
+                </div>
+            </div>
+            <div class="column column-50">
+                <img src="images/typography.png">
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="feature4" class="container">
+        <div class="row">
+            <div class="column column-50">
+                <img src="images/charts.png">
+            </div>
+            <div class="column column-50">
+                <div class="vertical-center"><h2>Built in Charts</h2>
+                <p>pieSparrow comes with the capabilit of charts through javasript out of the box, currently Bar, Line and Pie charts
+                    are available with more type being added in next release.
+                </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="feature5" class="container">
+        <div class="row">
+            <div class="column column-50">
+                <div class="vertical-center"><h2>Visually Appealing</h2>
+                    <p>Design creativley with five available color pallets having nine colors <br> each for your charts.</p>
+                </div>
+            </div>
+            <div class="column column-50">
+                <img src="images/colors.png">
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="fotter">
+        <br>
+        <div id="container">
+            <div class="column column-24"></div>
+            <div class="column column-50">
+                <img src='images/fotter_logo.png' height="40" class="center" vertical-align="center">
+                <p>copyrights © <script>document.write(/\d{4}/.exec(Date())[0])</script> | version alpha 0.0.1<br>
+                developed by <a href="https://itsdaniyalm.com" target="_blank" rel="noopener"> Daniyal M</a><br>
+                released under MIT License</p>
+            </div>
+        </div>
+    <br>
     </div>
 </body>
 </html>
