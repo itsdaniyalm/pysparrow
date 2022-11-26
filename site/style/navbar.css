@@ -12,11 +12,13 @@
   #subnav {
     overflow: hidden;
     background-color: rgb(255, 255, 255);
-    width: 99%;
+    width: 52%;
     position: fixed;
     top: 70px;
+    left: 25%;
     padding: 10px;
-    box-shadow: 1px 6px 45px -24px rgba(0,0,0,1);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     z-index: 51;
   }
   /* Navbar links */
@@ -99,3 +101,9 @@
   .closebtn:hover {
     color: rgb(160, 160, 160);
   } 
+
+  .screen {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 10px;
+    border-radius: 10px;
+  }

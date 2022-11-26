@@ -6,6 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Hello World</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         </head>
@@ -17,17 +18,48 @@
     <div class = "container">
     <div class = "row">
     <div class="column column-100">
-    <h1>H1 - Text</h1>
-    
-    <h2>H2 - Text</h2>
-    
-    <h3>H3 - Text</h3>
-    
-    <h4>H4 - Text</h4>
-    
-    <p>Paragraph - Text</p>
-    
-    <strong>Bold - Text</strong>
+    <div><canvas id='Population of Cities' width='100' height='400'></canvas></div>
+    <script>
+        const ctxpie = document.getElementById('Population of Cities');
+        new Chart(ctxpie, {
+          type: 'pie',
+          data: {
+            labels: ['Karachi', 'Lahore', 'Faisalabad', 'Gujranwala', 'Rawalpindi'],
+            datasets: [{
+              data: [16.09, 12.64, 3.46, 2.23, 2.24],
+              backgroundColor: ['#9999ff', '#6666cc', '#666699', '#333366', '#333333', '#663300', '#996633', '#cc9900', '#ffcc00'] 
+            }]
+          },
+          options: {
+            maintainAspectRatio: false,
+            scales: {
+              y: {
+                beingAtZerop: true,
+                display: false,
+                grid: {
+                  display: false
+                }
+            },
+              x: {
+                display: false,
+                grid: {
+                  display: false
+                }
+              }              
+            },
+            plugins: {
+                title: {
+                    align: 'start',
+                    display: true,
+                    text: 'Population of Cities'
+                },
+                legend: {
+                    display: true
+                }
+            }
+          }
+        });
+      </script>
     </div>
     </div>
     </div>

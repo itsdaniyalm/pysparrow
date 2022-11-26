@@ -28,7 +28,15 @@
                 <div class="container">
                 <a href="#release-notes">Release Notes </a> &#x2022 
                 <a href="#installation"> Installation</a> &#x2022
-                <a href="#initialize"> Initialization</a> &#x2022
+                <a href="#grids"> Grids</a> &#x2022
+                <a href="#rows"> Rows</a> &#x2022
+                <a href="#typography"> Typography</a> &#x2022
+                <a href="#images"> Images</a> &#x2022
+                <a href="#dataframes"> Dataframes</a> &#x2022
+                <a href="#barcharts"> Bar Charts</a> &#x2022
+                <a href="#linecharts"> Line Charts</a> &#x2022
+                <a href="#piecharts"> Pie Chart</a> &#x2022
+                <a href="#color"> Color Pallets</a>
                 </div>
             </div>
         </div>
@@ -36,7 +44,7 @@
 </head>
 <body>
     <div id="release-notes"></div><br><br><br><br><br><br>
-    <div iclass="row">
+    <div class="row">
         <div class="container">
             <div>
                 <h3>Release Notes</h3>
@@ -64,18 +72,639 @@
                 <p>Before composing anything, the html file needs to be initialize through <code>init</code> function.</p>
                 <blockquote>
                     Function:<br>
-                    <code>init(<em>filename, title, iconn</em>)</code>
+                    <code>init(<em>filename, title, icon</em>)</code>
                 </blockquote>
-                <p></p>
+                <table>
+                    <thead>
+                        <th>Parameter</th>
+                        <th>Format</th>
+                        <th>Description</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><em>filename</em></td>
+                            <td>string</td>
+                            <td>name of HMTL file which will be generated</td>
+                        </tr>
+                        <tr>
+                            <td><em>title</em></td>
+                            <td>string</td>
+                            <td>Title of HMTL page</td>
+                        </tr>
+                        <tr>
+                            <td><em>icon</em></td>
+                            <td>True/False</td>
+                            <td>Turn on or off the pieSparrow banding on top right of page</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <blockquote>
+                    Example:<br>
+                    <code>
+                        import piesparrow as ps<br>
+                        &nbsp;ps.init(filename='helloWorld.html', title='Hello World !', icon=True)
+                    </code>
+                </blockquote>
             </div>
+            <hr>
+            <div id="grids">
+                <h3>Grid System</h3>
+                <p>Grids are composed of rows and column, each row can contain a minimum of 1 and maximum of 5 columns. Unlimited number of rows can be added</p>
+            </div>
+            <div id="rows">
+                <h3>Row and Columns</h3>
+                <p>Row is a basic building component, each visual element that needs to be presented on the page must be contained with in a row and atleast one column. row is called as a function while columns are its parameters</p>
+                <blockquote>
+                    Function:<br>
+                    <code>row(<em>col1, col2, col3, col4, col5, col1w, col2w, col3w, col4w, col5w</em>)</code>
+                </blockquote>
+                <table>
+                    <thead>
+                        <th>Parameter</th>
+                        <th>Format</th>
+                        <th>Description</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><em>col1</em></td>
+                            <td>string/variable/function</td>
+                            <td>Contents that need to be displayed in first column</td>
+                        </tr>
+                        <tr>
+                            <td><em>col2</em></td>
+                            <td>string/variable/function</td>
+                            <td>Contents that need to be displayed in second column</td>
+                        </tr>
+                        <tr>
+                            <td><em>col3</em></td>
+                            <td>string/variable/function</td>
+                            <td>Contents that need to be displayed in third column</td>
+                        </tr>
+                        <tr>
+                            <td><em>col4</em></td>
+                            <td>string/variable/function</td>
+                            <td>Contents that need to be displayed in fourth column</td>
+                        </tr>
+                        <tr>
+                            <td><em>col5</em></td>
+                            <td>string/variable/function</td>
+                            <td>Contents that need to be displayed in fifth column</td>
+                        </tr>
+                        <tr>
+                            <td><em>col1w</em></td>
+                            <td>integer</td>
+                            <td>Width of first column, can be defined between 10 to 100 with increments of 10 like 10,20,30,...,100</td>
+                        </tr>
+                        <tr>
+                            <td><em>col2w</em></td>
+                            <td>integer</td>
+                            <td>Width of second column, can be defined between 10 to 100 with increments of 10 like 10,20,30,...,100</td>
+                        </tr>
+                        <tr>
+                            <td><em>col3w</em></td>
+                            <td>integer</td>
+                            <td>Width of third column, can be defined between 10 to 100 with increments of 10 like 10,20,30,...,100</td>
+                        </tr>
+                        <tr>
+                            <td><em>col4w</em></td>
+                            <td>integer</td>
+                            <td>Width of fourth column, can be defined between 10 to 100 with increments of 10 like 10,20,30,...,100</td>
+                        </tr>
+                        <tr>
+                            <td><em>col5w</em></td>
+                            <td>integer</td>
+                            <td>Width of fifth column, can be defined between 10 to 100 with increments of 10 like 10,20,30,...,100</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <blockquote>
+                    Example:<br>
+                    <code>
+                        ps.row(<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;col1w = 50,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;col1 = ('This is the First Column of 50% width'),<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;col2w = 50,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;col2 = ('This is the Second Column of 50% width')<br>
+                        )
+                    </code>
+                </blockquote>
+                <h5>Output:</h5>
+                <div class="screen">
+                    <div class="row">
+                        <div class="column column-50">This is the First Column of 50% width</div>
+                        <div class="column column-50">This is the Second Column of 50% width</div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div id="typography">
+                <h3>Typography</h3>
+                <p>Beside writing text without any function will result in text being displayed, four different heading sizes starting from <code>h1</code> (biggest) to <code>h4</code> (smallest) can be called. <code>p</code> can be called for paragraph texts and <code>bold</code> can be called for strong text.</p>
+                <blockquote>
+                    Function:<br>
+                    <code>h1(<em>text</em>)</code><br>
+                    <code>h2(<em>text</em>)</code><br>
+                    <code>h3(<em>text</em>)</code><br>
+                    <code>h4(<em>text</em>)</code><br>
+                    <code>p(<em>text</em>)</code><br>
+                    <code>bold(<em>text</em>)</code><br>
+                </blockquote>
+                <table>
+                    <thead>
+                        <th>Parameter</th>
+                        <th>Format</th>
+                        <th>Description</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><em>text</em></td>
+                            <td>string/variable/function</td>
+                            <td>Contents that needs to be displayed</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                <blockquote>
+                    Example:<br>
+                    <code>
+                        ps.row(<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;col1 = (<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ps.h1('This is H1 Text')+<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ps.h2('This is H2 Text')+<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ps.h3('This is H3 Text')+<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ps.h4('This is H4 Text')+<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ps.p('This is paragraph Text')+<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ps.bold('This is bold text')+<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ps.p('This is '+ps.bold('inline bold')+'text')<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;)<br>
+                        )
+                    </code>
+                </blockquote>
+                <h5>Output:</h5>
+                <div class="screen">
+                    <div class="row">
+                        <div class="column">
+                            <h1>This is H1 Text</h1>
+                            <h2>This is H2 Text</h2>
+                            <h3>This is H3 Text</h3>
+                            <h4>This is H4 Text</h4>
+                            <p>This is paragraph text</p>
+                            <strong>This is bold text</strong><br>
+                            <p>This is <strong>inline bold</strong> text</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div id="images">
+                <h3>Images</h3>
+                <p>Images can be displayed by calling <code>img</code>.</p>
+                <blockquote>
+                    Function:<br>
+                    <code>img(<em>path, height, width</em>)</code><br>
+                </blockquote>
+                <table>
+                    <thead>
+                        <th>Parameter</th>
+                        <th>Format</th>
+                        <th>Description</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><em>path</em></td>
+                            <td>string</td>
+                            <td>Path of image along with filename and extension</td>
+                        </tr>
+                        <tr>
+                            <td><em>height</em></td>
+                            <td>integer</td>
+                            <td>Height of image, default is 250</td>
+                        </tr>
+                        <tr>
+                            <td><em>width</em></td>
+                            <td>integer</td>
+                            <td>Width of image, default is 250</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                <blockquote>
+                    Example:<br>
+                    <code>
+                        ps.row(<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;col1 = ps.img(path='images/logo.png', height=100, width=360)<br>
+                        )
+                    </code>
+                </blockquote>
+                <h5>Output:</h5>
+                <div class="screen">
+                    <div class="row">
+                        <div class="column">
+                            <img src="images/logo.png" height="100" width="360">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div id="dataframes">
+                <h3>Dataframes</h3>
+                <p>Pandas data frames can be beautifully displaye by calling<code>table</code>.</p>
+                <blockquote>
+                    Function:<br>
+                    <code>table(<em>df, justify</em>)</code><br>
+                </blockquote>
+                <table>
+                    <thead>
+                        <th>Parameter</th>
+                        <th>Format</th>
+                        <th>Description</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><em>df</em></td>
+                            <td>dataframe</td>
+                            <td>Pandas dataframe object that needs to be displayed</td>
+                        </tr>
+                        <tr>
+                            <td><em>justify</em></td>
+                            <td>string</td>
+                            <td>Text alignment of column headers, left, center of right</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <blockquote>
+                    Example:<br>
+                    <code>
+                        data = pandas.read_csv('population.csv')<br>
+                        ps.row(<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;col1 = ps.table(df=data, justify='left')<br>
+                        )
+                    </code>
+                </blockquote>
+                <h5>Output:</h5>
+                <div class="screen">
+                    <div class="row">
+                        <div class="column">
+                            <img src="images/table.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div id="barcharts">
+                <h3>Bar Charts</h3>
+                <p>Bar Charts can be created by calling<code>bar</code> function.</p>
+                <blockquote>
+                    Function:<br>
+                    <code>bar(<em>title, dataframe, xlabel, ydata, ylabel, titledisplay, legenddisplay , color, height, grid, axis</em>)</code><br>
+                </blockquote>
+                <table>
+                    <thead>
+                        <th>Parameter</th>
+                        <th>Format</th>
+                        <th>Description</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><em>title</em></td>
+                            <td>string</td>
+                            <td>Title of Chart</td>
+                        </tr>
+                        <tr>
+                            <td><em>dataframe</em></td>
+                            <td>Pandas dataframe object</td>
+                            <td>Dataframe for which chart needs to be displayed</td>
+                        </tr>
+                        <tr>
+                            <td><em>xlabel</em></td>
+                            <td>string</td>
+                            <td>Name of column in dataframe which needs to be displayed on x-axis</td>
+                        </tr>
+                        <tr>
+                            <td><em>ydata</em></td>
+                            <td>string</td>
+                            <td>Name of column in dataframe for values which needs to be plotted on y-axis</td>
+                        </tr>
+                        <tr>
+                            <td><em>ylabel</em></td>
+                            <td>string</td>
+                            <td>Label to be displayed on tool tip</td>
+                        </tr>
+                        <tr>
+                            <td><em>titledisplay</em></td>
+                            <td>string</td>
+                            <td>'true' displays the chart title, 'false' turn off the chart title</td>
+                        </tr>
+                        <tr>
+                            <td><em>legenddisplay</em></td>
+                            <td>string</td>
+                            <td>'true' displays the legends, 'false' turn off the legends</td>
+                        </tr>
+                        <tr>
+                            <td><em>color</em></td>
+                            <td>list</td>
+                            <td>Colors hex codes can be passed as a list<br>or one of the pieSparrow color pallet can be used</td>
+                        </tr>
+                        <tr>
+                            <td><em>height</em></td>
+                            <td>integer</td>
+                            <td>Height of chart (width is controlled by column width)</td>
+                        </tr><tr>
+                            <td><em>grid</em></td>
+                            <td>string</td>
+                            <td>'true' displays the grid, 'false' turn off the grid</td>
+                        </tr><tr>
+                            <td><em>axis</em></td>
+                            <td>string</td>
+                            <td>'true' displays the axis, 'false' turn off the axis</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <blockquote>
+                    Example:<br>
+                    <code>
+                        df = pandas.read_csv('population.csv')<br>
+                        ps.row(<br>
+                         &nbsp;&nbsp;&nbsp;&nbsp;col1 = ps.bar(<br>
+                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title='Population of Pakistani Cities',<br>
+                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dataframe = df,<br>
+                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xlabel = 'City',<br>
+                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ydata = 'Population 2020',<br>
+                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ylabel = 'Population in 2020',<br>
+                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;legenddisplay = 'false',<br>
+                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height= 50,<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color = ps.rainbow<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;)<br>
+                        )
+                    </code>
+                </blockquote>
+                <h5>Dataframe:</h5>
+                <img src="images/table.png">
+                <h5>Output:</h5>
+                <div class="screen">
+                    <div class="row">
+                        <div class="column">
+                            <img src="images/bar-chart.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div id="linecharts">
+                <h3>Line Charts</h3>
+                <p>Line Charts can be created by calling<code>line</code> function. A maximum of five lines can be plotted in single chart.</p>
+                <blockquote>
+                    Function:<br>
+                    <code>line(<em>title, dataframe, xlabel, ylabel1, ydata1, ylabel2, ydata2, ylabel3, ydata3, ylabel4, ydata4,<br>ylabel5, ydata5, titledisplay, legenddisplay, color, height, grid, axis</em>)</code><br>
+                </blockquote>
+                <table>
+                    <thead>
+                        <th>Parameter</th>
+                        <th>Format</th>
+                        <th>Description</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><em>title</em></td>
+                            <td>string</td>
+                            <td>Title of Chart</td>
+                        </tr>
+                        <tr>
+                            <td><em>dataframe</em></td>
+                            <td>Pandas dataframe object</td>
+                            <td>Dataframe for which chart needs to be displayed</td>
+                        </tr>
+                        <tr>
+                            <td><em>xlabel</em></td>
+                            <td>string</td>
+                            <td>Name of column in dataframe which needs to be displayed on x-axis</td>
+                        </tr>
+                        <tr>
+                            <td><em>ylabel1</em></td>
+                            <td>string</td>
+                            <td>Label which needs to be displayed for first line</td>
+                        </tr>
+                        <tr>
+                            <td><em>ydata1</em></td>
+                            <td>string</td>
+                            <td>Name of column in dataframe for values which needs to be plotted on y-axis as first line</td>
+                        </tr>
+                        <tr>
+                            <td><em>ylabel2</em></td>
+                            <td>string</td>
+                            <td>Label which needs to be displayed for second line</td>
+                        </tr>
+                        <tr>
+                            <td><em>ydata2</em></td>
+                            <td>string</td>
+                            <td>Name of column in dataframe for values which needs to be plotted on y-axis as second line</td>
+                        </tr>
+                        <tr>
+                            <td><em>ylabel3</em></td>
+                            <td>string</td>
+                            <td>Label which needs to be displayed for third line</td>
+                        </tr>
+                        <tr>
+                            <td><em>ydata3</em></td>
+                            <td>string</td>
+                            <td>Name of column in dataframe for values which needs to be plotted on y-axis as third line</td>
+                        </tr>
+                        <tr>
+                            <td><em>ylabel4</em></td>
+                            <td>string</td>
+                            <td>Label which needs to be displayed for fourth line</td>
+                        </tr>
+                        <tr>
+                            <td><em>ydata4</em></td>
+                            <td>string</td>
+                            <td>Name of column in dataframe for values which needs to be plotted on y-axis as fourth line</td>
+                        </tr>
+                        <tr>
+                            <td><em>ylabel5</em></td>
+                            <td>string</td>
+                            <td>Label which needs to be displayed for fifth line</td>
+                        </tr>
+                        <tr>
+                            <td><em>ydata5</em></td>
+                            <td>string</td>
+                            <td>Name of column in dataframe for values which needs to be plotted on y-axis as fifth line</td>
+                        </tr>
+                        <tr>
+                            <td><em>titledisplay</em></td>
+                            <td>string</td>
+                            <td>'true' displays the chart title, 'false' turn off the chart title</td>
+                        </tr>
+                        <tr>
+                            <td><em>legenddisplay</em></td>
+                            <td>string</td>
+                            <td>'true' displays the legends, 'false' turn off the legends</td>
+                        </tr>
+                        <tr>
+                            <td><em>color</em></td>
+                            <td>list</td>
+                            <td>Colors hex codes can be passed as a list<br>or one of the pieSparrow color pallet can be used</td>
+                        </tr>
+                        <tr>
+                            <td><em>height</em></td>
+                            <td>integer</td>
+                            <td>Height of chart (width is controlled by column width)</td>
+                        </tr><tr>
+                            <td><em>grid</em></td>
+                            <td>string</td>
+                            <td>'true' displays the grid, 'false' turn off the grid</td>
+                        </tr><tr>
+                            <td><em>axis</em></td>
+                            <td>string</td>
+                            <td>'true' displays the axis, 'false' turn off the axis</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <blockquote>
+                    Example:<br>
+                    <code>
+                        df = pandas.read_csv('population.csv')<br>
+                        ps.row(<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;col1 = ps.line(<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title='Population trend of Provinces',<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dataframe= df,<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xlabel = 'Year',<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ylabel1 = 'Balochistan',<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ydata1 = 'Balochistan',<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ylabel2 = 'KPK',<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ydata2 = 'KPK',<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ylabel3 = 'Punjab',<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ydata3 = 'Punjab',<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ylabel4 = 'Sindh',<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ydata4 = 'Sindh',<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height = 70,<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;legenddisplay = 'true'<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;)<br>
+                        )
+                    </code>
+                </blockquote>
+                <h5>Dataframe:</h5>
+                <img src="images/line-df.png">
+                <h5>Output:</h5>
+                <div class="screen">
+                    <div class="row">
+                        <div class="column">
+                            <img src="images/line-chart.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div id="piecharts">
+                <h3>Pie Charts</h3>
+                <p>Pie Charts can be created by calling<code>pie</code> function.</p>
+                <blockquote>
+                    Function:<br>
+                    <code>pie(<em>title, dataframe, labels, data, titledisplay, legenddisplay, color, height, width , grid, axis</em>)</code><br>
+                </blockquote>
+                <table>
+                    <thead>
+                        <th>Parameter</th>
+                        <th>Format</th>
+                        <th>Description</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><em>title</em></td>
+                            <td>string</td>
+                            <td>Title of Chart</td>
+                        </tr>
+                        <tr>
+                            <td><em>dataframe</em></td>
+                            <td>Pandas dataframe object</td>
+                            <td>Dataframe for which chart needs to be displayed</td>
+                        </tr>
+                        <tr>
+                            <td><em>labels</em></td>
+                            <td>string</td>
+                            <td>Name of column in dataframe which needs to be displayed as lables</td>
+                        </tr>
+                        <tr>
+                            <td><em>data</em></td>
+                            <td>string</td>
+                            <td>Name of column in dataframe for values which needs to be plotted in pie chart</td>
+                        </tr>
+                        <tr>
+                            <td><em>titledisplay</em></td>
+                            <td>string</td>
+                            <td>'true' displays the chart title, 'false' turn off the chart title</td>
+                        </tr>
+                        <tr>
+                            <td><em>legenddisplay</em></td>
+                            <td>string</td>
+                            <td>'true' displays the legends, 'false' turn off the legends</td>
+                        </tr>
+                        <tr>
+                            <td><em>color</em></td>
+                            <td>list</td>
+                            <td>Colors hex codes can be passed as a list<br>or one of the pieSparrow color pallet can be used</td>
+                        </tr>
+                        <tr>
+                            <td><em>height</em></td>
+                            <td>integer</td>
+                            <td>Height of chart (width is controlled by column width)</td>
+                        </tr><tr>
+                            <td><em>grid</em></td>
+                            <td>string</td>
+                            <td>'true' displays the grid, 'false' turn off the grid</td>
+                        </tr><tr>
+                            <td><em>axis</em></td>
+                            <td>string</td>
+                            <td>'true' displays the axis, 'false' turn off the axis</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <blockquote>
+                    Example:<br>
+                    <code>
+                        df = pandas.read_csv('population.csv')<br>
+                        pps.row(<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;col1 = ps.pie(<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title = 'Population of Cities',<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dataframe = df,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;labels = 'City',<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data = 'Population 2020',<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height = 400,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color = ps.dusktilldawn<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;)<br>
+                        )
+                    </code>
+                </blockquote>
+                <h5>Dataframe:</h5>
+                <img src="images/table.png">
+                <h5>Output:</h5>
+                <div class="screen">
+                    <div class="row">
+                        <div class="column">
+                            <img src="images/pie-chart.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div id="color">
+                <h3>Color Pallets</h3>
+                <p>Color pallets can be passed on as color parameter in any chart function</p>
+                <blockquote>
+                    Function:<br>
+                    <code><em>default</em></code><br>
+                    <code><em>beach</em></code><br>
+                    <code><em>forest</em></code><br>
+                    <code><em>dusktilldawn</em></code><br>
+                </blockquote>
+                <div class="row">
+                    <div class="column">
+                        <img src="images/colors.png">
+                    </div>
+                </div>
+            </div>
+            <hr>
         </div>
     </div>
-
-
-
-
-
-
 
     <div id="fotter">
         <br>

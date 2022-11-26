@@ -1,5 +1,5 @@
 import pandas as pd
-
+import re
 
 # color pallets
 default = ["#ff3399","#cc33ff","#6600cc","#3333cc","#330099","#003399","#3366ff","3399ff","33ccff"]
@@ -17,6 +17,7 @@ def init(filename, title, icon=True):
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{title}</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         </head>
@@ -292,6 +293,11 @@ def pie(title, dataframe, labels, data, titledisplay = 'true', legenddisplay = '
         }});
       </script>
     '''
+    return chart
+
+def table(df, justify='left'):
+    tab = df.to_html(index=False, justify=f'{justify}')
+    chart = re.sub("border=\"1\" class=\"dataframe",'',tab)
     return chart
 
 def row(col1='False',col2='False',col3='False',col4='False',col5='False', col1w = 100, col2w = 100, col3w = 100, col4w = 100, col5w = 100):
