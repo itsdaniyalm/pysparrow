@@ -39,7 +39,7 @@ th {
   border-collapse: collapse; 
   height: 30px;
   text-align: left;
-  padding-right: 50px;
+  padding-right: 200px;
   margin-right: 50px;
 }
 table, td {
@@ -49,7 +49,7 @@ table, td {
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 0px;
-  padding-right: 50px;
+  padding-right: 200px;
   margin-right: 50px;
 }
 
