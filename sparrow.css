@@ -39,6 +39,7 @@ th {
   border-collapse: collapse; 
   height: 30px;
   text-align: left;
+  padding-right: 30px;
 }
 table, td {
   border-bottom: 1px solid;
