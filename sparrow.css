@@ -44,6 +44,7 @@ th, thead {
 }
 table, td, tbody {
   border-bottom: 1px solid;
+  border-right: 1px solid;
   border-collapse: collapse;
   border-color: rgb(100, 100, 100);
   padding-top: 5px;
