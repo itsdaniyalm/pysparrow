@@ -33,7 +33,7 @@ body,p {
   padding: 10px;
 }
 
-th {
+th, thead {
   border-bottom: 3px solid;
   border-color: rgb(100, 100, 100);
   border-collapse: collapse; 
@@ -42,7 +42,7 @@ th {
   padding-right: 200px;
   margin-right: 50px;
 }
-table, td {
+table, td, tbody {
   border-bottom: 1px solid;
   border-collapse: collapse;
   border-color: rgb(100, 100, 100);
