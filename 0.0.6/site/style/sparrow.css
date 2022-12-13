@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+    }
+  html * {
+      font-family: 'Rubik', sans-serif;
+      background-color: #ffffff;
+  }
+  
+  body,p,h1,h2,h3,h4,h5 {
+    color: rgb(81, 81, 81);
+  }
+  
+  body,p {
+    font-weight: 300;
+  }
+  
+  #card {
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 5px 5px 8px #e7e7e7, -5px -5px 8px #f3f3f3;
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  #box {
+    border-radius: 10px;
+    background: #ffffff;
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  th {
+    border: 1px solid;
+    border-color: rgb(180, 180, 180);
+    border-collapse: collapse;
+    background-color: #e7e7e7; 
+    height: 30px;
+    text-align: left;
+    padding-left: 5px;
+    padding-right: 30px;
+    color: rgb(81, 81, 81);
+  }
+  table, td {
+    border: 1px solid;
+    border-collapse: collapse;
+    border-color: rgb(180, 180, 180);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 30px;
+    color: rgb(81, 81, 81);
+  }
+  
+  #icon {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 10000;
+  }
+  
+  a:link {
+    color: #6600cc;
+  }
+  
+  a:visited {
+    color: rgb(128, 128, 128);
+  }
+  
+  a:hover {
+    color: #c4a2e6;
+  }
+  
+  a:active {
+    color: #2d0158;
+  } 
+  
+  .col-xs {width: 18%;}
+  .col-sm {width: 36%;}
+  .col-md {width: 47%;}
+  .col-lg {width: 76%;}
+  .col-xl {width: 98%;}
+  
+  [class*="col-"] {
+    float: left;
+    padding: 10px;
+    border: 0px solid red;
+  }
+  
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+    }
+
+#navbar {
+    background-color: "#000000";
+    
+}
