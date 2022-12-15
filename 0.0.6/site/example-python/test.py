@@ -3,7 +3,7 @@ import piesparrow as ps
 
 data = pd.read_csv('mock-data.csv')
 
-ps.init(filename = 'myChart',title = 'My Chart')
+ps.init(filename = 'Chart',title = 'My Chart')
 
 ps.row(
 	ps.chart(
