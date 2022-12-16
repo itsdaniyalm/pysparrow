@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width", initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://d3js.org/d3.v6.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itsdaniyalm/piesparrow-styles@main/sparrow_l.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itsdaniyalm/piesparrow-styles@main/base_light.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itsdaniyalm/piesparrow-styles@main/rainbow_d.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itsdaniyalm/piesparrow-styles@main/base_dark.css">
     <script src="https://cdn.jsdelivr.net/npm/billboard.js@3.6.3/dist/billboard.min.js"></script>
     <title>web test</title>
     <link rel="icon" type="image/x-icon" href="http://piesparrow.itsdaniyalm.com/images/favicon.png">
@@ -17,17 +17,19 @@
 </head>
 <body>
         <div class="row">
-    <h1>H1 Text</h1>
-    
-    <h2>H2 Text</h2>
-    
-    <h3>H3 Text</h3>
-    
-    <h4>H4 Text</h4>
-    
-    <p>Paragraph text</p>
-    
-    <strong>Strong Text</strong>
-    
-    <a href="#">link</a>
+    <div id="ch"></div>
+    <script>
+    var chart = bb.generate({
+        size: {height:500},
+        data: {
+            json: {"c1":[1],"c2":[1],"c3":[1],"c4":[1],"c5":[1],"c6":[1],"c7":[1],"c8":[1],"c9":[1],"c10":[1],} ,
+            type: "donut"
+        },
+        legend: {
+            show: false,
+            position: "bottom"
+        },
+        bindto:'#ch'
+        });
+    </script>
     </div>

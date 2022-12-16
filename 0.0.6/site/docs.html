@@ -66,7 +66,7 @@
             <p>Before composing anything, the html file needs to be initialize through <code>init</code>function.</p>
             <blockquote>
                 Function<br>
-                <code>init(<em>filename, title, basetheme, charttheme, icon</em>)</code>
+                <code>ps.init<em>(filename, title, basetheme, charttheme, icon)</em></code>
             </blockquote>
             <br>
             <table>
@@ -89,24 +89,74 @@
                     <tr>
                         <td><em>basetheme</em></td>
                         <td>string</td>
-                        <td>Title of HMTL page</td>
+                        <td>name of theme (light, dark) - Default <code>light</code></td>
                     </tr>
                     <tr>
                         <td><em>charttheme</em></td>
                         <td>string</td>
-                        <td>Title of HMTL page</td>
+                        <td>name of charts color theme (any name from themes) - Default <code>sparrow_light</code></td>
                     </tr>
                     <tr>
                         <td><em>icon</em></td>
                         <td>True/False</td>
-                        <td>Turn on or off the pieSparrow banding on top right of page</td>
+                        <td>Turn on or off the pieSparrow banding on top right of page - Default <code>True</code></td>
                     </tr>
                 </tbody>
             </table>
+            <blockquote>
+                Example<br>
+                <code>import piesparrow as ps <br></code>
+                <code>ps.init<em>(filename='helloWorld', title='My Hello World Page', basetheme=ps.light, charttheme=ps.sparrow_light, icon=True)</em></code>
+            </blockquote>
         </div>
     </div>
-    <hr>
-
+    <div id="spacing-20" class="col-xl"><hr></div>
+    <div id="themes">
+        <div id="spacing-20" class="col-lg">
+            <h1 id="h1l">Themes</h1>
+            <p>Color themes can be defined as piesparrow variable in the parameter of<code>init<em>(basetheme,charttheme)</em></code>function.</p>
+            <blockquote>
+                Function<br>
+                <code>ps.init<em>(filename, title, basetheme, charttheme, icon)</em></code>
+            </blockquote>
+            <br>
+            <table>
+                <thead>
+                    <th>basetheme</th>
+                    <th>charttheme</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>light</code></td>
+                        <td><code>rainbow_light</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>light</code></td>
+                        <td><code>sparrow_light</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>light</code></td>
+                        <td><code>virdis_light</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>light</code></td>
+                        <td><code>cividis_light</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>light</code></td>
+                        <td><code>gold_light</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>light</code></td>
+                        <td><code>sunflower_light</code></td>
+                    </tr>
+                </tbody>
+            </table>
+            <img class="img-resp" src="images/themes_light.png">
+            <img class="img-resp" src="images/themes_dark.png">
+        </div>
+    </div>
+    <div id="spacing-20" class="col-xl"><hr></div>
 
 
 
