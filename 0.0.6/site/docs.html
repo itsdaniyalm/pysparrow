@@ -24,7 +24,7 @@
        <h3>Docs - Version 0.1.2</h3>
        <a href="https://piesparrow.com/docs005.html">&#x2022 Docs for Version 0.0.5</a><br>
        <a href="#installation">&#x2022 Installation</a><br>
-       <a href="#installation">&#x2022 Initialization</a><br>
+       <a href="#initialization">&#x2022 Initialization</a><br>
        <a href="#themes">&#x2022 Themes</a><br>
        <a href="#grids">&#x2022 Grid System</a><br>
        <a href="row">&nbsp;&nbsp;&nbsp;&nbsp; &#x2022 Row</a><br>
@@ -46,13 +46,66 @@
        <a href="#kpi">&nbsp;&nbsp;&nbsp;&nbsp; &#x2022 KPI</a><br>
     </div>
     <br><br><br><br><br>
+
     <div id="installation">
         <div id="spacing-20" class="col-lg">
             <h1 id="h1l">Installation</h1>
             <p>The most easiest method for installation of pieSparrow is through PyPi and pip</p>
+            <blockquote>
+                Use pip to install pieSparrow in your Python environment<br>
+                <code>$pip install piesparrow</code>
+            </blockquote>
+            as an alternate, you can download the complete package from GitHub <br><br>
+            <a href="https://github.com/itsdaniyalm/piesparrow/archive/refs/heads/main.zip"><button class="button">download</button></a>
         </div>
     </div>
-    
+    <div id="spacing-20" class="col-xl"><hr></div>
+    <div id="initialization">
+        <div id="spacing-20" class="col-lg">
+            <h1 id="h1l">Initialization</h1>
+            <p>Before composing anything, the html file needs to be initialize through <code>init</code>function.</p>
+            <blockquote>
+                Function<br>
+                <code>init(<em>filename, title, basetheme, charttheme, icon</em>)</code>
+            </blockquote>
+            <br>
+            <table>
+                <thead>
+                    <th>Parameter</th>
+                    <th>Format</th>
+                    <th>Description</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><em>filename</em></td>
+                        <td>string</td>
+                        <td>name of HMTL file which will be generated</td>
+                    </tr>
+                    <tr>
+                        <td><em>title</em></td>
+                        <td>string</td>
+                        <td>Title of HMTL page</td>
+                    </tr>
+                    <tr>
+                        <td><em>basetheme</em></td>
+                        <td>string</td>
+                        <td>Title of HMTL page</td>
+                    </tr>
+                    <tr>
+                        <td><em>charttheme</em></td>
+                        <td>string</td>
+                        <td>Title of HMTL page</td>
+                    </tr>
+                    <tr>
+                        <td><em>icon</em></td>
+                        <td>True/False</td>
+                        <td>Turn on or off the pieSparrow banding on top right of page</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <hr>
 
 
 
@@ -66,7 +119,7 @@
 
 
 
-    <br><br><br><br><br>
+    <div class="col-xl"><br><br><br><br><br>><br><br><br><br><br>><br><br><br><br><br>><br><br><br><br><br></div>
     <div id ="footer">
             <center>
                 <br>

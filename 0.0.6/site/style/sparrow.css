@@ -44,10 +44,10 @@
   }
   
   th {
-    border: 1px solid;
+    border-bottom: 1px solid;
     border-color: rgb(180, 180, 180);
     border-collapse: collapse;
-    background-color: #e7e7e7; 
+    background-color: #ffffff; 
     height: 30px;
     text-align: left;
     padding-left: 5px;
@@ -55,7 +55,7 @@
     color: rgb(81, 81, 81);
   }
   table, td {
-    border: 1px solid;
+    border-bottom: 1px solid;
     border-collapse: collapse;
     border-color: rgb(180, 180, 180);
     padding-top: 5px;
@@ -202,7 +202,7 @@ input {
   width: 100%;
   top: 0px;
   left: 0px;
-  box-shadow: -1px -13px 40px -7px rgba(0,0,0,0.75);
+  box-shadow: 1px -5px 9px 0px rgba(0,0,0,0.16);
   z-index: 50;
 }
 
@@ -224,11 +224,22 @@ hr {
 code {
   font-family: monospace;
   background: #dddddd;
-    border-radius: 0.4rem;
-    font-size: 86%;
-    margin: 0 0.2rem;
-    padding: 0.2rem 0.5rem;
-    white-space: nowrap;
+  border-radius: 0.4rem;
+  font-size: 86%;
+  margin: 0 0.2rem;
+  padding: 0.2rem 0.5rem;
+  white-space: nowrap;
+}
+
+code em {
+  font-family: monospace;
+  font-style: italic;
+  background: #dddddd;
+  border-radius: 0.4rem;
+  font-size: 86%;
+  margin: 0 0.2rem;
+  padding: 0.2rem 0.5rem;
+  white-space: nowrap;
 }
 
 #side-menu{
@@ -245,3 +256,9 @@ code {
   border-top: 1px solid #e1e1e1;
 }
 
+blockquote {
+  border-left: 0.3rem solid #d1d1d1;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 1rem 1.5rem;
+}
