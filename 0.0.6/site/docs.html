@@ -12,7 +12,7 @@
     <div id="navbar">
         <img src="images/web_logo.png" height="50">
         <a href="https://github.com/itsdaniyalm/piesparrow"><div id="icon" class="material-icons">data_object</div> GitHub</a>
-        <a href="https://piesparrow.com/examples"><div id="icon" class="material-icons">pie_chart</div> Examples</a>
+        <a href="https://piesparrow.com/examples.html"><div id="icon" class="material-icons">pie_chart</div> Examples</a>
         <a href="https://piesparrow.com/docs.html#installation"><div id="icon" class="material-icons">settings</div> Installation</a>
         <a href="https://piesparrow.com/docs.html"><div id="icon" class="material-icons">description</div> Docs</a>
         <a href="https://piesparrow.com/release_notes.html"><div id="icon" class="material-icons">text_snippet</div> Release Notes</a>
@@ -46,8 +46,9 @@
     </div>
     <br><br><br><br><br>
 
-    <div id="installation">
-        <div id="spacing-20" class="col-lg">
+
+    <div id="spacing-20" class="col-lg">
+        <div id="installation">
             <h1 id="h1l">Installation</h1>
             <p>The most easiest method for installation of pieSparrow is through PyPi and pip</p>
             <blockquote>
@@ -58,9 +59,9 @@
             <a href="https://github.com/itsdaniyalm/piesparrow/archive/refs/heads/main.zip"><button class="button">download</button></a>
         </div>
     </div>
-    <div id="spacing-20" class="col-xl"><hr></div>
-    <div id="initialization">
-        <div id="spacing-20" class="col-lg">
+
+    <div id="spacing-20" class="col-xl"><div id="initialization"><hr></div></div>
+    <div id="spacing-20" class="col-lg">
             <h1 id="h1l">Initialization</h1>
             <p>Before composing anything, the html file needs to be initialize through <code>init</code>function.</p>
             <blockquote>
@@ -107,11 +108,10 @@
                 <code>import piesparrow as ps <br></code>
                 <code>ps.init(filename = 'helloWorld', title = 'My Hello World Page', basetheme = ps.light, charttheme =p s.sparrow_light, icon = True)</code>
             </blockquote>
-        </div>
     </div>
-    <div id="spacing-20" class="col-xl"><hr></div>
-    <div id="themes">
-        <div id="spacing-20" class="col-lg">
+
+    <div id="spacing-20" class="col-xl"><div id="themes"><hr></div></div>
+    <div id="spacing-20" class="col-lg">
             <h1 id="h1l">Themes</h1>
             <p>Color themes can be defined as piesparrow variable in the parameter of<code>init<em>(basetheme,charttheme)</em></code>function.</p>
             <blockquote>
@@ -177,17 +177,16 @@
             </table>
             <img class="img-resp" src="images/themes_light.png">
             <img class="img-resp" src="images/themes_dark.png">
-        </div>
     </div>
-    <div id="spacing-20" class="col-xl"><hr></div>
-    <div id="grids">
-        <div id="spacing-20" class="col-lg">
+
+    <div id="spacing-20" class="col-xl"><div id="grids"><hr></div></div>
+    <div id="spacing-20" class="col-lg">
             <h1 id="h1l">Grids</h1>
             <p>Grids are composed of rows and column, each row can contain a minimum of 1 and maximum of 5 columns. Unlimited number of rows can be added</p>
-        </div>
     </div>
-    <div id="row">
-        <div id="spacing-20" class="col-lg">
+    
+    <div id="spacing-20" class="col-lg">
+        <div id="row">
             <h1 id="h1l">Row</h1>
             <p>Row is a basic building component, each visual element that needs to be presented on the page must be contained with in a row, a row can have one or multiple columns but it is not mandatory to have a column to display data.</p>
             <blockquote>
@@ -216,8 +215,9 @@
             </blockquote>
         </div>
     </div>
-    <div id="column">
-        <div id="spacing-20" class="col-lg">
+    
+    <div id="spacing-20" class="col-lg">
+        <div id="column">
             <h1 id="h1l">Column</h1>
             <p>5 different type of columns can be called, <code>colxs, colsm, colmd, collg, colxl</code></p>
             <p><code>colxs</code> occupies the width of 18%, <code>colsm</code>occupies 36%, <code>colmd</code>occupies 47%, <code>collg</code>occupies 76% and <code>colxl</code>occupies 98% width.
@@ -267,9 +267,9 @@
             </blockquote>
         </div>
     </div>
-    <div id="spacing-20" class="col-xl"><hr></div>
-    <div id="typography">
-        <div id="spacing-20" class="col-lg">
+
+    <div id="spacing-20" class="col-xl"><div id="typography"><hr></div></div>
+    <div id="spacing-20" class="col-lg">
             <h1 id="h1l">Typography</h1>
             <p>Beside writing text without any function will result in text being displayed, four different heading sizes starting from <code>h1</code>(biggest) to <code>h4</code>(smallest) can be called. <code>p</code>can be called for paragraph texts and <code>bold</code>can be called for strong text.</p>
             <blockquote>
@@ -311,20 +311,918 @@
                     )
                 </code>
             </blockquote>
-        </div>
     </div>
-    <div id="spacing-20" class="col-xl"><hr></div>
+
+    <div id="spacing-20" class="col-xl"><div id="images"><hr></div></div>
+    <div id="spacing-20" class="col-lg">
+            <h1 id="h1l">Images</h1>
+            <p>Images can be displayed by calling <code>img</code>.</p>
+            <blockquote>
+                Function<br>
+                <code>img<em>(path, height, width)</em></code><br>
+            </blockquote>
+            <br>
+            <table>
+                <thead>
+                    <th>Parameter</th>
+                    <th>Format</th>
+                    <th>Description</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><em>path</em></td>
+                        <td>string</td>
+                        <td>image path</td>
+                    </tr>
+                    <tr>
+                        <td><em>height</em></td>
+                        <td>integer</td>
+                        <td>height of image. Defaul <code>250</code></td>
+                    </tr>
+                    <tr>
+                        <td><em>width</em></td>
+                        <td>integer</td>
+                        <td>width of image. Defaul <code>250</code></td>
+                    </tr>
+                </tbody>
+            </table>
+            <blockquote>
+                Example<br>
+                <code>
+                    import piesparrow as ps <br><br>
+                    ps.row(<br>
+                    &nbsp;&nbsp;ps.img(path='images/logo.png', height=100, width-100)<br>
+                    )
+                </code>
+            </blockquote>
+    </div>
+    
+    <div id="spacing-20" class="col-xl"><div id="links"><hr></div></div>
+    <div id="spacing-20" class="col-lg">
+            <h1 id="h1l">Links</h1>
+            <p>Links can be displayed by calling <code>link</code>.</p>
+            <blockquote>
+                Function<br>
+                <code>link<em>(target,label)</em></code><br>
+            </blockquote>
+            <br>
+            <table>
+                <thead>
+                    <th>Parameter</th>
+                    <th>Format</th>
+                    <th>Description</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><em>target</em></td>
+                        <td>string</td>
+                        <td>link target</td>
+                    </tr>
+                    <tr>
+                        <td><em>label</em></td>
+                        <td>string</td>
+                        <td>label for link.</td>
+                    </tr>
+                    <tr>
+                        <td><em>width</em></td>
+                        <td>integer</td>
+                        <td>width of image. Defaul <code>250</code></td>
+                    </tr>
+                </tbody>
+            </table>
+            <blockquote>
+                Example<br>
+                <code>
+                    import piesparrow as ps <br><br>
+                    ps.row(<br>
+                    &nbsp;&nbsp;ps.link(target='https://piesparrow.com', label='home')<br>
+                    )
+                </code>
+            </blockquote>
+    </div>
+
+    <div id="spacing-20" class="col-xl"><div id="dataframes"></div><hr></div></div>
+    <div id="spacing-20" class="col-lg">
+            <h1 id="h1l">Datafames</h1>
+            <p>Pandas data frames can be beautifully displaye by calling<code>table</code>.</p>
+            <blockquote>
+                Function<br>
+                <code>table<em>(df)</em></code><br>
+            </blockquote>
+            <br>
+            <table>
+                <thead>
+                    <th>Parameter</th>
+                    <th>Format</th>
+                    <th>Description</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><em>df</em></td>
+                        <td>dataframe</td>
+                        <td>Pandas dataframe object</td>
+                    </tr>
+                </tbody>
+            </table>
+            <blockquote>
+                Example<br>
+                <code>
+                    import piesparrow as ps<br>
+                    import pandas as pd <br><br>
+                    data = pd.read_csv('mock_data.csv)<br>
+                    ps.row(<br>
+                    &nbsp;&nbsp;ps.table(df='data')<br>
+                    )
+                </code>
+            </blockquote>
+    </div>
+
+    <div id="spacing-20" class="col-xl"><div id="bar"></div><hr></div></div>
+    <div id="spacing-20" class="col-lg">
+            <h1 id="h1l">Charts</h1>
+            <h1 id="h1l">Bar Chart</h1>
+            <p>Bar Charts can be created by calling <code>chart</code>function and declaring <code>type</code> parameter as <code>'bar'</code></p>
+            <blockquote>
+                Function<br>
+                <code>chart<em>(title, df, columns, xcolumn, xaxistype, type, datalabels, zoom, legend, legendposition, grid, xlabel, ylabel, height)</em></code><br>
+            </blockquote>
+            <br>
+            <table>
+                <thead>
+                    <th>Parameter</th>
+                    <th>Format</th>
+                    <th>Description</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><em>title</em></td>
+                        <td>string</td>
+                        <td>unique name of chart</td>
+                    </tr>
+                    <tr>
+                        <td><em>df</em></td>
+                        <td>dataframe</td>
+                        <td>Pandas dataframe</td>
+                    </tr>
+                    <tr>
+                        <td><em>columns</em></td>
+                        <td>list</td>
+                        <td>List of all colums for which chart needs to be made</td>
+                    </tr>
+                    <tr>
+                        <td><em>xcolumn</em></td>
+                        <td>string</td>
+                        <td>Name of column which needs to be placed at x axis.</td>
+                    </tr>
+                    <tr>
+                        <td><em>xaxistype</em></td>
+                        <td>string</td>
+                        <td>Type of x-axis, Default <code>'category'</code>. for non categorical axis leave blank</td>
+                    </tr>
+                    <tr>
+                        <td><em>type</em></td>
+                        <td>string</td>
+                        <td>Type of chart, for bar chart use <code>'bar'</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><em>datalabels</em></td>
+                        <td>string</td>
+                        <td>Turn on data labels for charts <code>'true'</code>for on or<code>'false'</code>for off, Default<code>'true'</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><em>zoom</em></td>
+                        <td>string</td>
+                        <td>Turn on drag and zoom function for charts <code>'true'</code>for on or<code>'false'</code>for off, Default<code>'true'</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><em>legend</em></td>
+                        <td>string</td>
+                        <td>Turn on legend for charts <code>'true'</code>for on or<code>'false'</code>for off, Default<code>'true'</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><em>legendposition</em></td>
+                        <td>string</td>
+                        <td>Define legend position in charts <code>'bottom'</code><code>'right'</code>or<code>'inset'</code>, Default<code>'bottom'</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><em>grid</em></td>
+                        <td>string</td>
+                        <td>Turn on grids display for charts <code>'true'</code>for on or<code>'false'</code>for off, Default<code>'true'</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><em>xlabel</em></td>
+                        <td>string</td>
+                        <td>Define label for x axis</td>
+                    </tr>
+                    <tr>
+                        <td><em>ylabel</em></td>
+                        <td>string</td>
+                        <td>Define label for y axis</td>
+                    </tr>
+                    <tr>
+                        <td><em>height</em></td>
+                        <td>integer</td>
+                        <td>Set height for chart. Default <code>500</code></td>
+                    </tr>
+                </tbody>
+            </table>
+            <blockquote>
+                Example<br>
+                <code>
+                    import piesparrow as ps<br>
+                    import pandas as pd <br><br>
+                    data = pd.read_csv('mock_data.csv)<br>
+                    ps.row(<br>
+                    &nbsp;&nbsp;ps.chart(<br>
+                    &nbsp;&nbsp;title = 'barchart1',<br>
+                    &nbsp;&nbsp;df = data,<br>
+                    &nbsp;&nbsp;columns = ['Months','Data 1'],<br>
+                    &nbsp;&nbsp;xcolumn = 'Months',<br>
+                    &nbsp;&nbsp;type = 'bar',<br>
+                    &nbsp;&nbsp;)<br>
+                    )
+                </code>
+            </blockquote>
+    </div>
+    
+    <div id="spacing-20" class="col-xl"><div id="line"></div><hr></div></div>
+    <div id="spacing-20" class="col-lg">
+            <h1 id="h1l">Line Chart</h1>
+            <p>Line Charts can be created by calling <code>chart</code>function and declaring <code>type</code> parameter as <code>'line'</code></p>
+            <blockquote>
+                Function<br>
+                <code>chart<em>(title, df, columns, xcolumn, xaxistype, type, datalabels, zoom, legend, legendposition, grid, xlabel, ylabel, height)</em></code><br>
+            </blockquote>
+            <br>
+            <table>
+                <thead>
+                    <th>Parameter</th>
+                    <th>Format</th>
+                    <th>Description</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><em>title</em></td>
+                        <td>string</td>
+                        <td>unique name of chart</td>
+                    </tr>
+                    <tr>
+                        <td><em>df</em></td>
+                        <td>dataframe</td>
+                        <td>Pandas dataframe</td>
+                    </tr>
+                    <tr>
+                        <td><em>columns</em></td>
+                        <td>list</td>
+                        <td>List of all colums for which chart needs to be made</td>
+                    </tr>
+                    <tr>
+                        <td><em>xcolumn</em></td>
+                        <td>string</td>
+                        <td>Name of column which needs to be placed at x axis.</td>
+                    </tr>
+                    <tr>
+                        <td><em>xaxistype</em></td>
+                        <td>string</td>
+                        <td>Type of x-axis, Default <code>'category'</code>. for non categorical axis leave blank</td>
+                    </tr>
+                    <tr>
+                        <td><em>type</em></td>
+                        <td>string</td>
+                        <td>Type of chart, for line chart use <code>'line'</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><em>datalabels</em></td>
+                        <td>string</td>
+                        <td>Turn on data labels for charts <code>'true'</code>for on or<code>'false'</code>for off, Default<code>'true'</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><em>zoom</em></td>
+                        <td>string</td>
+                        <td>Turn on drag and zoom function for charts <code>'true'</code>for on or<code>'false'</code>for off, Default<code>'true'</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><em>legend</em></td>
+                        <td>string</td>
+                        <td>Turn on legend for charts <code>'true'</code>for on or<code>'false'</code>for off, Default<code>'true'</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><em>legendposition</em></td>
+                        <td>string</td>
+                        <td>Define legend position in charts <code>'bottom'</code><code>'right'</code>or<code>'inset'</code>, Default<code>'bottom'</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><em>grid</em></td>
+                        <td>string</td>
+                        <td>Turn on grids display for charts <code>'true'</code>for on or<code>'false'</code>for off, Default<code>'true'</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><em>xlabel</em></td>
+                        <td>string</td>
+                        <td>Define label for x axis</td>
+                    </tr>
+                    <tr>
+                        <td><em>ylabel</em></td>
+                        <td>string</td>
+                        <td>Define label for y axis</td>
+                    </tr>
+                    <tr>
+                        <td><em>height</em></td>
+                        <td>integer</td>
+                        <td>Set height for chart. Default <code>500</code></td>
+                    </tr>
+                </tbody>
+            </table>
+            <blockquote>
+                Example<br>
+                <code>
+                    import piesparrow as ps<br>
+                    import pandas as pd <br><br>
+                    data = pd.read_csv('mock_data.csv)<br>
+                    ps.row(<br>
+                    &nbsp;&nbsp;ps.chart(<br>
+                    &nbsp;&nbsp;title = 'linechart1',<br>
+                    &nbsp;&nbsp;df = data,<br>
+                    &nbsp;&nbsp;columns = ['Months','Data 1'],<br>
+                    &nbsp;&nbsp;xcolumn = 'Months',<br>
+                    &nbsp;&nbsp;type = 'line',<br>
+                    &nbsp;&nbsp;)<br>
+                    )
+                </code>
+            </blockquote>
+    </div>
+
+    <div id="spacing-20" class="col-xl"><div id="spline"></div><hr></div></div>
+    <div id="spacing-20" class="col-lg">
+            <h1 id="h1l">Spline Chart</h1>
+            <p>Spline Charts can be created by calling <code>chart</code>function and declaring <code>type</code> parameter as <code>'spline'</code></p>
+            <blockquote>
+                Function<br>
+                <code>chart<em>(title, df, columns, xcolumn, xaxistype, type, datalabels, zoom, legend, legendposition, grid, xlabel, ylabel, height)</em></code><br>
+            </blockquote>
+            <br>
+            <table>
+                <thead>
+                    <th>Parameter</th>
+                    <th>Format</th>
+                    <th>Description</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><em>title</em></td>
+                        <td>string</td>
+                        <td>unique name of chart</td>
+                    </tr>
+                    <tr>
+                        <td><em>df</em></td>
+                        <td>dataframe</td>
+                        <td>Pandas dataframe</td>
+                    </tr>
+                    <tr>
+                        <td><em>columns</em></td>
+                        <td>list</td>
+                        <td>List of all colums for which chart needs to be made</td>
+                    </tr>
+                    <tr>
+                        <td><em>xcolumn</em></td>
+                        <td>string</td>
+                        <td>Name of column which needs to be placed at x axis.</td>
+                    </tr>
+                    <tr>
+                        <td><em>xaxistype</em></td>
+                        <td>string</td>
+                        <td>Type of x-axis, Default <code>'category'</code>. for non categorical axis leave blank</td>
+                    </tr>
+                    <tr>
+                        <td><em>type</em></td>
+                        <td>string</td>
+                        <td>Type of chart, for spline chart use <code>'spline'</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><em>datalabels</em></td>
+                        <td>string</td>
+                        <td>Turn on data labels for charts <code>'true'</code>for on or<code>'false'</code>for off, Default<code>'true'</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><em>zoom</em></td>
+                        <td>string</td>
+                        <td>Turn on drag and zoom function for charts <code>'true'</code>for on or<code>'false'</code>for off, Default<code>'true'</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><em>legend</em></td>
+                        <td>string</td>
+                        <td>Turn on legend for charts <code>'true'</code>for on or<code>'false'</code>for off, Default<code>'true'</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><em>legendposition</em></td>
+                        <td>string</td>
+                        <td>Define legend position in charts <code>'bottom'</code><code>'right'</code>or<code>'inset'</code>, Default<code>'bottom'</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><em>grid</em></td>
+                        <td>string</td>
+                        <td>Turn on grids display for charts <code>'true'</code>for on or<code>'false'</code>for off, Default<code>'true'</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><em>xlabel</em></td>
+                        <td>string</td>
+                        <td>Define label for x axis</td>
+                    </tr>
+                    <tr>
+                        <td><em>ylabel</em></td>
+                        <td>string</td>
+                        <td>Define label for y axis</td>
+                    </tr>
+                    <tr>
+                        <td><em>height</em></td>
+                        <td>integer</td>
+                        <td>Set height for chart. Default <code>500</code></td>
+                    </tr>
+                </tbody>
+            </table>
+            <blockquote>
+                Example<br>
+                <code>
+                    import piesparrow as ps<br>
+                    import pandas as pd <br><br>
+                    data = pd.read_csv('mock_data.csv)<br>
+                    ps.row(<br>
+                    &nbsp;&nbsp;ps.chart(<br>
+                    &nbsp;&nbsp;title = 'splinechart1',<br>
+                    &nbsp;&nbsp;df = data,<br>
+                    &nbsp;&nbsp;columns = ['Months','Data 1'],<br>
+                    &nbsp;&nbsp;xcolumn = 'Months',<br>
+                    &nbsp;&nbsp;type = 'spline',<br>
+                    &nbsp;&nbsp;)<br>
+                    )
+                </code>
+            </blockquote>
+    </div>
+
+    <div id="spacing-20" class="col-xl"><div id="area"></div><hr></div></div>
+    <div id="spacing-20" class="col-lg">
+            <h1 id="h1l">Area Chart</h1>
+            <p>Area Charts can be created by calling <code>chart</code>function and declaring <code>type</code> parameter as <code>'area'</code></p>
+            <blockquote>
+                Function<br>
+                <code>chart<em>(title, df, columns, xcolumn, xaxistype, type, datalabels, zoom, legend, legendposition, grid, xlabel, ylabel, height)</em></code><br>
+            </blockquote>
+            <br>
+            <table>
+                <thead>
+                    <th>Parameter</th>
+                    <th>Format</th>
+                    <th>Description</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><em>title</em></td>
+                        <td>string</td>
+                        <td>unique name of chart</td>
+                    </tr>
+                    <tr>
+                        <td><em>df</em></td>
+                        <td>dataframe</td>
+                        <td>Pandas dataframe</td>
+                    </tr>
+                    <tr>
+                        <td><em>columns</em></td>
+                        <td>list</td>
+                        <td>List of all colums for which chart needs to be made</td>
+                    </tr>
+                    <tr>
+                        <td><em>xcolumn</em></td>
+                        <td>string</td>
+                        <td>Name of column which needs to be placed at x axis.</td>
+                    </tr>
+                    <tr>
+                        <td><em>xaxistype</em></td>
+                        <td>string</td>
+                        <td>Type of x-axis, Default <code>'category'</code>. for non categorical axis leave blank</td>
+                    </tr>
+                    <tr>
+                        <td><em>type</em></td>
+                        <td>string</td>
+                        <td>Type of chart, for area chart use <code>'area'</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><em>datalabels</em></td>
+                        <td>string</td>
+                        <td>Turn on data labels for charts <code>'true'</code>for on or<code>'false'</code>for off, Default<code>'true'</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><em>zoom</em></td>
+                        <td>string</td>
+                        <td>Turn on drag and zoom function for charts <code>'true'</code>for on or<code>'false'</code>for off, Default<code>'true'</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><em>legend</em></td>
+                        <td>string</td>
+                        <td>Turn on legend for charts <code>'true'</code>for on or<code>'false'</code>for off, Default<code>'true'</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><em>legendposition</em></td>
+                        <td>string</td>
+                        <td>Define legend position in charts <code>'bottom'</code><code>'right'</code>or<code>'inset'</code>, Default<code>'bottom'</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><em>grid</em></td>
+                        <td>string</td>
+                        <td>Turn on grids display for charts <code>'true'</code>for on or<code>'false'</code>for off, Default<code>'true'</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><em>xlabel</em></td>
+                        <td>string</td>
+                        <td>Define label for x axis</td>
+                    </tr>
+                    <tr>
+                        <td><em>ylabel</em></td>
+                        <td>string</td>
+                        <td>Define label for y axis</td>
+                    </tr>
+                    <tr>
+                        <td><em>height</em></td>
+                        <td>integer</td>
+                        <td>Set height for chart. Default <code>500</code></td>
+                    </tr>
+                </tbody>
+            </table>
+            <blockquote>
+                Example<br>
+                <code>
+                    import piesparrow as ps<br>
+                    import pandas as pd <br><br>
+                    data = pd.read_csv('mock_data.csv)<br>
+                    ps.row(<br>
+                    &nbsp;&nbsp;ps.chart(<br>
+                    &nbsp;&nbsp;title = 'areachart1',<br>
+                    &nbsp;&nbsp;df = data,<br>
+                    &nbsp;&nbsp;columns = ['Months','Data 1'],<br>
+                    &nbsp;&nbsp;xcolumn = 'Months',<br>
+                    &nbsp;&nbsp;type = 'area',<br>
+                    &nbsp;&nbsp;)<br>
+                    )
+                </code>
+            </blockquote>
+    </div>
+
+    <div id="spacing-20" class="col-xl"><div id="areaspline"></div><hr></div></div>
+    <div id="spacing-20" class="col-lg">
+            <h1 id="h1l">Area Spline Chart</h1>
+            <p>Area Spline Charts can be created by calling <code>chart</code>function and declaring <code>type</code> parameter as <code>'area-spline'</code></p>
+            <blockquote>
+                Function<br>
+                <code>chart<em>(title, df, columns, xcolumn, xaxistype, type, datalabels, zoom, legend, legendposition, grid, xlabel, ylabel, height)</em></code><br>
+            </blockquote>
+            <br>
+            <table>
+                <thead>
+                    <th>Parameter</th>
+                    <th>Format</th>
+                    <th>Description</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><em>title</em></td>
+                        <td>string</td>
+                        <td>unique name of chart</td>
+                    </tr>
+                    <tr>
+                        <td><em>df</em></td>
+                        <td>dataframe</td>
+                        <td>Pandas dataframe</td>
+                    </tr>
+                    <tr>
+                        <td><em>columns</em></td>
+                        <td>list</td>
+                        <td>List of all colums for which chart needs to be made</td>
+                    </tr>
+                    <tr>
+                        <td><em>xcolumn</em></td>
+                        <td>string</td>
+                        <td>Name of column which needs to be placed at x axis.</td>
+                    </tr>
+                    <tr>
+                        <td><em>xaxistype</em></td>
+                        <td>string</td>
+                        <td>Type of x-axis, Default <code>'category'</code>. for non categorical axis leave blank</td>
+                    </tr>
+                    <tr>
+                        <td><em>type</em></td>
+                        <td>string</td>
+                        <td>Type of chart, for area spline chart use <code>'area-spline'</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><em>datalabels</em></td>
+                        <td>string</td>
+                        <td>Turn on data labels for charts <code>'true'</code>for on or<code>'false'</code>for off, Default<code>'true'</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><em>zoom</em></td>
+                        <td>string</td>
+                        <td>Turn on drag and zoom function for charts <code>'true'</code>for on or<code>'false'</code>for off, Default<code>'true'</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><em>legend</em></td>
+                        <td>string</td>
+                        <td>Turn on legend for charts <code>'true'</code>for on or<code>'false'</code>for off, Default<code>'true'</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><em>legendposition</em></td>
+                        <td>string</td>
+                        <td>Define legend position in charts <code>'bottom'</code><code>'right'</code>or<code>'inset'</code>, Default<code>'bottom'</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><em>grid</em></td>
+                        <td>string</td>
+                        <td>Turn on grids display for charts <code>'true'</code>for on or<code>'false'</code>for off, Default<code>'true'</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><em>xlabel</em></td>
+                        <td>string</td>
+                        <td>Define label for x axis</td>
+                    </tr>
+                    <tr>
+                        <td><em>ylabel</em></td>
+                        <td>string</td>
+                        <td>Define label for y axis</td>
+                    </tr>
+                    <tr>
+                        <td><em>height</em></td>
+                        <td>integer</td>
+                        <td>Set height for chart. Default <code>500</code></td>
+                    </tr>
+                </tbody>
+            </table>
+            <blockquote>
+                Example<br>
+                <code>
+                    import piesparrow as ps<br>
+                    import pandas as pd <br><br>
+                    data = pd.read_csv('mock_data.csv)<br>
+                    ps.row(<br>
+                    &nbsp;&nbsp;ps.chart(<br>
+                    &nbsp;&nbsp;title = 'areasplinechart1',<br>
+                    &nbsp;&nbsp;df = data,<br>
+                    &nbsp;&nbsp;columns = ['Months','Data 1'],<br>
+                    &nbsp;&nbsp;xcolumn = 'Months',<br>
+                    &nbsp;&nbsp;type = 'area-spline',<br>
+                    &nbsp;&nbsp;)<br>
+                    )
+                </code>
+            </blockquote>
+    </div>
+
+    <div id="spacing-20" class="col-xl"><div id="pie"></div><hr></div></div>
+    <div id="spacing-20" class="col-lg">
+            <h1 id="h1l">Pie Chart</h1>
+            <p>Pie Charts can be created by calling <code>pie</code>function.
+            <blockquote>
+                Function<br>
+                <code>pie<em>(title, df, columns, legend, legendposition, height)</em></code><br>
+            </blockquote>
+            <br>
+            <table>
+                <thead>
+                    <th>Parameter</th>
+                    <th>Format</th>
+                    <th>Description</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><em>title</em></td>
+                        <td>string</td>
+                        <td>unique name of chart</td>
+                    </tr>
+                    <tr>
+                        <td><em>df</em></td>
+                        <td>dataframe</td>
+                        <td>Pandas dataframe</td>
+                    </tr>
+                    <tr>
+                        <td><em>columns</em></td>
+                        <td>list</td>
+                        <td>List of all colums for which chart needs to be made</td>
+                    </tr>
+                    <tr>
+                        <td><em>legend</em></td>
+                        <td>string</td>
+                        <td>Turn on legend for charts <code>'true'</code>for on or<code>'false'</code>for off, Default<code>'true'</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><em>legendposition</em></td>
+                        <td>string</td>
+                        <td>Define legend position in charts <code>'bottom'</code><code>'right'</code>or<code>'inset'</code>, Default<code>'bottom'</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><em>height</em></td>
+                        <td>integer</td>
+                        <td>Set height for chart. Default <code>500</code></td>
+                    </tr>
+                </tbody>
+            </table>
+            <blockquote>
+                Example<br>
+                <code>
+                    import piesparrow as ps<br>
+                    import pandas as pd <br><br>
+                    data = pd.read_csv('mock_data.csv)<br>
+                    ps.row(<br>
+                    &nbsp;&nbsp;ps.pie(<br>
+                    &nbsp;&nbsp;title = 'piechart1',<br>
+                    &nbsp;&nbsp;df = data,<br>
+                    &nbsp;&nbsp;columns = ['Data 1', 'Data 2', 'Data 3', 'Data 4'],<br>
+                    &nbsp;&nbsp;)<br>
+                    )
+                </code>
+            </blockquote>
+    </div>
+
+    <div id="spacing-20" class="col-xl"><div id="donut"></div><hr></div></div>
+    <div id="spacing-20" class="col-lg">
+            <h1 id="h1l">Donut Chart</h1>
+            <p>Donut Charts can be created by calling <code>donut</code>function.
+            <blockquote>
+                Function<br>
+                <code>donut<em>(title, df, columns, legend, legendposition, height)</em></code><br>
+            </blockquote>
+            <br>
+            <table>
+                <thead>
+                    <th>Parameter</th>
+                    <th>Format</th>
+                    <th>Description</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><em>title</em></td>
+                        <td>string</td>
+                        <td>unique name of chart</td>
+                    </tr>
+                    <tr>
+                        <td><em>df</em></td>
+                        <td>dataframe</td>
+                        <td>Pandas dataframe</td>
+                    </tr>
+                    <tr>
+                        <td><em>columns</em></td>
+                        <td>list</td>
+                        <td>List of all colums for which chart needs to be made</td>
+                    </tr>
+                    <tr>
+                        <td><em>legend</em></td>
+                        <td>string</td>
+                        <td>Turn on legend for charts <code>'true'</code>for on or<code>'false'</code>for off, Default<code>'true'</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><em>legendposition</em></td>
+                        <td>string</td>
+                        <td>Define legend position in charts <code>'bottom'</code><code>'right'</code>or<code>'inset'</code>, Default<code>'bottom'</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><em>height</em></td>
+                        <td>integer</td>
+                        <td>Set height for chart. Default <code>500</code></td>
+                    </tr>
+                </tbody>
+            </table>
+            <blockquote>
+                Example<br>
+                <code>
+                    import piesparrow as ps<br>
+                    import pandas as pd <br><br>
+                    data = pd.read_csv('mock_data.csv)<br>
+                    ps.row(<br>
+                    &nbsp;&nbsp;ps.donut(<br>
+                    &nbsp;&nbsp;title = 'donutchart1',<br>
+                    &nbsp;&nbsp;df = data,<br>
+                    &nbsp;&nbsp;columns = ['Data 1', 'Data 2', 'Data 3', 'Data 4'],<br>
+                    &nbsp;&nbsp;)<br>
+                    )
+                </code>
+            </blockquote>
+    </div>
+
+    <div id="spacing-20" class="col-xl"><div id="gauge"></div><hr></div></div>
+    <div id="spacing-20" class="col-lg">
+            <h1 id="h1l">Gauge</h1>
+            <p>Gauge can be created by calling <code>gauge</code>function.
+            <blockquote>
+                Function<br>
+                <code>gauge<em>(title, label, value, legend, legendposition,color, height)</em></code><br>
+            </blockquote>
+            <br>
+            <table>
+                <thead>
+                    <th>Parameter</th>
+                    <th>Format</th>
+                    <th>Description</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><em>title</em></td>
+                        <td>string</td>
+                        <td>unique name of chart</td>
+                    </tr>
+                    <tr>
+                        <td><em>label</em></td>
+                        <td>string</td>
+                        <td>Display label for gauge</td>
+                    </tr>
+                    <tr>
+                        <td><em>value</em></td>
+                        <td>integer</td>
+                        <td>value for gauge</td>
+                    </tr>
+                    <tr>
+                        <td><em>legend</em></td>
+                        <td>string</td>
+                        <td>Turn on legend for charts <code>'true'</code>for on or<code>'false'</code>for off, Default<code>'true'</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><em>legendposition</em></td>
+                        <td>string</td>
+                        <td>Define legend position in charts <code>'bottom'</code><code>'right'</code>or<code>'inset'</code>, Default<code>'bottom'</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><em>color</em></td>
+                        <td>string</td>
+                        <td>Hex value of color</td>
+                    </tr>
+                    <tr>
+                        <td><em>height</em></td>
+                        <td>integer</td>
+                        <td>Set height for chart. Default <code>500</code></td>
+                    </tr>
+                </tbody>
+            </table>
+            <blockquote>
+                Example<br>
+                <code>
+                    import piesparrow as ps<br>
+                    x = 60 <br>
+                    ps.row(<br>
+                    &nbsp;&nbsp;ps.gauge(<br>
+                    &nbsp;&nbsp;title = 'gauge1',<br>
+                    &nbsp;&nbsp;label = 'progress',<br>
+                    &nbsp;&nbsp;value = x,<br>
+                    &nbsp;&nbsp;)color = '#127881'<br>
+                    )
+                </code>
+            </blockquote>
+    </div>
+
+    <div id="spacing-20" class="col-xl"><div id="kpi"></div><hr></div></div>
+    <div id="spacing-20" class="col-lg">
+            <h1 id="h1l">KPI</h1>
+            <p>KPI card can be created by calling <code>kpi</code>function. It workby dispalying last row value in dataframe and difference of last and second last value as delta in positive or negative.
+            <blockquote>
+                Function<br>
+                <code>kpi<em>(df, column)</em></code><br>
+            </blockquote>
+            <br>
+            <table>
+                <thead>
+                    <th>Parameter</th>
+                    <th>Format</th>
+                    <th>Description</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><em>df</em></td>
+                        <td>dataframe</td>
+                        <td>Pandas dataframe</td>
+                    </tr>
+                    <tr>
+                        <td><em>column</em></td>
+                        <td>string</td>
+                        <td>Name of column</td>
+                    </tr>
+                   
+                </tbody>
+            </table>
+            <blockquote>
+                Example<br>
+                <code>
+                    import piesparrow as ps<br>
+                    import pandas as pd <br><br>
+                    data = pd.read_csv('mock_data.csv)<br>
+                    ps.row(<br>
+                    &nbsp;&nbsp;ps.kpi(<br>
+                    &nbsp;&nbsp;df = data,<br>
+                    &nbsp;&nbsp;column = 'Data 1',<br>
+                    &nbsp;&nbsp;)<br>
+                    )
+                </code>
+            </blockquote>
+    </div>
 
 
 
 
 
 
-
-
-
-
-    <div class="col-xl"><br><br><br><br><br>><br><br><br><br><br>><br><br><br><br><br>><br><br><br><br><br></div>
+    <div class="col-xl"><br><br></div>
     <div id ="footer">
             <center>
                 <br>
