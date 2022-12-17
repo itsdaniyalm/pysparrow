@@ -27,9 +27,8 @@
        <a href="#initialization">&#x2022 Initialization</a><br>
        <a href="#themes">&#x2022 Themes</a><br>
        <a href="#grids">&#x2022 Grid System</a><br>
-       <a href="row">&nbsp;&nbsp;&nbsp;&nbsp; &#x2022 Row</a><br>
+       <a href="#row">&nbsp;&nbsp;&nbsp;&nbsp; &#x2022 Row</a><br>
        <a href="#column">&nbsp;&nbsp;&nbsp;&nbsp; &#x2022 Column</a><br>
-       <a href="#card">&nbsp;&nbsp;&nbsp;&nbsp; &#x2022 Card</a><br>
        <a href="#typography">&#x2022 Typography</a><br>
        <a href="#images">&#x2022 Images</a><br>
        <a href="#links">&#x2022 Links</a><br>
@@ -66,7 +65,7 @@
             <p>Before composing anything, the html file needs to be initialize through <code>init</code>function.</p>
             <blockquote>
                 Function<br>
-                <code>ps.init<em>(filename, title, basetheme, charttheme, icon)</em></code>
+                <code>init<em>(filename, title, basetheme, charttheme, icon)</em></code>
             </blockquote>
             <br>
             <table>
@@ -106,7 +105,7 @@
             <blockquote>
                 Example<br>
                 <code>import piesparrow as ps <br></code>
-                <code>ps.init<em>(filename='helloWorld', title='My Hello World Page', basetheme=ps.light, charttheme=ps.sparrow_light, icon=True)</em></code>
+                <code>ps.init(filename = 'helloWorld', title = 'My Hello World Page', basetheme = ps.light, charttheme =p s.sparrow_light, icon = True)</code>
             </blockquote>
         </div>
     </div>
@@ -117,7 +116,7 @@
             <p>Color themes can be defined as piesparrow variable in the parameter of<code>init<em>(basetheme,charttheme)</em></code>function.</p>
             <blockquote>
                 Function<br>
-                <code>ps.init<em>(filename, title, basetheme, charttheme, icon)</em></code>
+                <code>init<em>(filename, title, basetheme, charttheme, icon)</em></code>
             </blockquote>
             <br>
             <table>
@@ -150,6 +149,30 @@
                         <td><code>light</code></td>
                         <td><code>sunflower_light</code></td>
                     </tr>
+                    <tr>
+                        <td><code>dark</code></td>
+                        <td><code>rainbow_dark</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>dark</code></td>
+                        <td><code>sparrow_dark</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>dark</code></td>
+                        <td><code>virdis_dark</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>dark</code></td>
+                        <td><code>cividis_dark</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>dark</code></td>
+                        <td><code>gold_dark</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>dark</code></td>
+                        <td><code>sunflower_dark</code></td>
+                    </tr>
                 </tbody>
             </table>
             <img class="img-resp" src="images/themes_light.png">
@@ -157,8 +180,140 @@
         </div>
     </div>
     <div id="spacing-20" class="col-xl"><hr></div>
-
-
+    <div id="grids">
+        <div id="spacing-20" class="col-lg">
+            <h1 id="h1l">Grids</h1>
+            <p>Grids are composed of rows and column, each row can contain a minimum of 1 and maximum of 5 columns. Unlimited number of rows can be added</p>
+        </div>
+    </div>
+    <div id="row">
+        <div id="spacing-20" class="col-lg">
+            <h1 id="h1l">Row</h1>
+            <p>Row is a basic building component, each visual element that needs to be presented on the page must be contained with in a row, a row can have one or multiple columns but it is not mandatory to have a column to display data.</p>
+            <blockquote>
+                Function<br>
+                <code>row<em>(content)</em></code>
+            </blockquote>
+            <br>
+            <table>
+                <thead>
+                    <th>Parameter</th>
+                    <th>Format</th>
+                    <th>Description</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><em>content</em></td>
+                        <td>string/variable/function</td>
+                        <td>Contents that needs to be displayed.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <blockquote>
+                Example<br>
+                <code>import piesparrow as ps <br></code>
+                <code>ps.row(ps.p('Hello World'))</em></code>
+            </blockquote>
+        </div>
+    </div>
+    <div id="column">
+        <div id="spacing-20" class="col-lg">
+            <h1 id="h1l">Column</h1>
+            <p>5 different type of columns can be called, <code>colxs, colsm, colmd, collg, colxl</code></p>
+            <p><code>colxs</code> occupies the width of 18%, <code>colsm</code>occupies 36%, <code>colmd</code>occupies 47%, <code>collg</code>occupies 76% and <code>colxl</code>occupies 98% width.
+            <blockquote>
+                Function<br>
+                <code>colxs<em>(content, align, type)</em></code><br>
+                <code>colsm<em>(content, align, type)</em></code><br>
+                <code>colmd<em>(content, align, type)</em></code><br>
+                <code>collg<em>(content, align, type)</em></code><br>
+                <code>colxl<em>(content, align, type)</em></code>
+            </blockquote>
+            <br>
+            <table>
+                <thead>
+                    <th>Parameter</th>
+                    <th>Format</th>
+                    <th>Description</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><em>content</em></td>
+                        <td>string/variable/function</td>
+                        <td>Contents that needs to be displayed.</td>
+                    </tr>
+                    <tr>
+                        <td><em>align</em></td>
+                        <td>string</td>
+                        <td>Alignment of content inside column can be either <code>'left', 'right', 'center'</code>. Default <code>'center'</code></td>
+                    </tr>
+                    <tr>
+                        <td><em>type</em></td>
+                        <td>string</td>
+                        <td>Turn the shadow property on or off, use <code>'box'</code> for no shadow and <code>'card'</code> for shadow. Default <code>'box'</code></td>
+                    </tr>
+                </tbody>
+            </table>
+            <blockquote>
+                Example<br>
+                <code>import piesparrow as ps<br><br>
+                ps.row(<br>
+                &nbsp;ps.colsm(<br>
+                &nbsp;&nbsp;type = 'card'<br>
+                &nbsp;&nbsp;align = 'left'<br>
+                &nbsp;&nbsp;content = ps.h1("Hello World !")<br>
+                &nbsp;)<br>
+                )</code>
+            </blockquote>
+        </div>
+    </div>
+    <div id="spacing-20" class="col-xl"><hr></div>
+    <div id="typography">
+        <div id="spacing-20" class="col-lg">
+            <h1 id="h1l">Typography</h1>
+            <p>Beside writing text without any function will result in text being displayed, four different heading sizes starting from <code>h1</code>(biggest) to <code>h4</code>(smallest) can be called. <code>p</code>can be called for paragraph texts and <code>bold</code>can be called for strong text.</p>
+            <blockquote>
+                Function<br>
+                <code>h1<em>(txt)</em></code><br>
+                <code>h2<em>(txt)</em></code><br>
+                <code>h3<em>(txt)</em></code><br>
+                <code>h4<em>(txt)</em></code><br>
+                <code>p<em>(txt)</em></code><br>
+                <code>bold<em>(txt)</em></code><br>
+            </blockquote>
+            <br>
+            <table>
+                <thead>
+                    <th>Parameter</th>
+                    <th>Format</th>
+                    <th>Description</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><em>txt</em></td>
+                        <td>string/variabale/function</td>
+                        <td>content</td>
+                    </tr>
+                </tbody>
+            </table>
+            <blockquote>
+                Example<br>
+                <code>
+                    import piesparrow as ps <br><br>
+                    ps.row(<br>
+                    &nbsp;&nbsp;ps.h1('This is H1 Text')<br>
+                    +&nbsp;ps.h2('This is H2 Text')<br>
+                    +&nbsp;ps.h3('This is H3 Text')<br>
+                    +&nbsp;ps.h4('This is H4 Text')<br>
+                    +&nbsp;ps.p('This is paragraph Text')<br>
+                    +&nbsp;ps.bold('This is bold text')<br>
+                    +&nbsp;ps.p('This is '+ps.bold('inline bold')+'text')<br>
+                    )
+                </code>
+            </blockquote>
+        </div>
+    </div>
+    <div id="spacing-20" class="col-xl"><hr></div>
 
 
 
